@@ -5,9 +5,12 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/tachyons/css/tachyons.min.css"
+          />
         </Head>
-        <body>
+        <body className="bg-blue pa3">
           <Main />
           <NextScript />
         </body>
