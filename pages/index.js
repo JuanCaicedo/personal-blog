@@ -4,8 +4,8 @@ import AboutMe from '../content/about-me.mdx'
 import Talks from '../content/conference-talks.mdx'
 import Blog from '../content/blog.mdx'
 
-const Page = () => (
-  <Layout title="Juan Caicedo">
+const PageCard = ({ children }) => (
+  <Card>
     <style jsx>{`
       :global(:first-child) {
         margin-top: 0;
@@ -17,16 +17,27 @@ const Page = () => (
         width: 250px;
       }
     `}</style>
+    {children}
+  </Card>
+)
+
+const Page = () => (
+  <Layout title="Juan Caicedo">
+    <style jsx>{`
+      img {
+        width: 250px;
+      }
+    `}</style>
     <img src="/static/juan.jpg" className="center db mb4 overflow-hidden br2" />
-    <Card>
+    <PageCard>
       <AboutMe />
-    </Card>
-    <Card>
+    </PageCard>
+    <PageCard>
       <Blog />
-    </Card>
-    <Card>
+    </PageCard>
+    <PageCard>
       <Talks />
-    </Card>
+    </PageCard>
   </Layout>
 )
 
