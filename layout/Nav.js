@@ -1,1 +1,1 @@
-export default () => <div>Nav</div>
+export default () => null
