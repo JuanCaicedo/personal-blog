@@ -17,7 +17,7 @@ const Page = () => (
         width: 250px;
       }
     `}</style>
-    <img src="/static/juan.jpg" className="center db mb3 overflow-hidden br2" />
+    <img src="/static/juan.jpg" className="center db mb4 overflow-hidden br2" />
     <Card>
       <AboutMe />
     </Card>
