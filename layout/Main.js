@@ -11,7 +11,7 @@ export default ({ children, title = 'This is the default title' }) => (
       <Nav />
     </header>
 
-    <main className="mw-100 mw8-ns center">{children}</main>
+    <main className="mw-100 mw7-ns center">{children}</main>
 
     <Footer>Footer</Footer>
   </div>
