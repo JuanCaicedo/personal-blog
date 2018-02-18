@@ -13,7 +13,7 @@ const Nav = () => (
         color: #f4f4f4;
       }
     `}</style>
-    <nav className="f6 fw6 ttu tracked mw-100 mw7-ns center pv3 ph4">
+    <nav className="f6 fw6 ttu tracked mw-100 mw8-ns center pv3 ph4">
       <NavLink href="/">Home</NavLink>
       <NavLink href="/blog">Blog</NavLink>
       <NavLink href="/resume">Resume</NavLink>

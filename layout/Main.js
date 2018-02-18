@@ -45,7 +45,7 @@ export default ({ children, title = 'This is the default title' }) => (
 
     <GhLink />
 
-    <main className="mw-100 mw7-ns center pa3">
+    <main className="mw-100 mw8-ns center pa3">
       <div className="mt5">{children}</div>
     </main>
 

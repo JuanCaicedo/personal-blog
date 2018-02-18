@@ -9,6 +9,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/tachyons/css/tachyons.min.css"
           />
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <body>
           <Main />
