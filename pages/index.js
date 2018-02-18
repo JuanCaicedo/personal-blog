@@ -2,6 +2,7 @@ import Layout from '../layout/Main'
 import Card from '../components/Card'
 import AboutMe from '../content/about-me.mdx'
 import Talks from '../content/conference-talks.mdx'
+import Blog from '../content/blog.mdx'
 
 const Page = () => (
   <Layout title="Juan Caicedo">
@@ -15,6 +16,9 @@ const Page = () => (
     `}</style>
     <Card>
       <AboutMe />
+    </Card>
+    <Card>
+      <Blog />
     </Card>
     <Card>
       <Talks />
