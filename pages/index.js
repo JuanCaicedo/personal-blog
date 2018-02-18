@@ -13,7 +13,11 @@ const Page = () => (
       :global(:last-child) {
         margin-bottom: 0;
       }
+      img {
+        width: 250px;
+      }
     `}</style>
+    <img src="/static/juan.jpg" className="center db mb3 overflow-hidden br2" />
     <Card>
       <AboutMe />
     </Card>
