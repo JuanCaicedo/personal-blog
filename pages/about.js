@@ -11,20 +11,13 @@ const Page = () => (
         width: 250px;
       }
     `}</style>
-
     <img src="/static/juan.jpg" className="center db mb4 overflow-hidden br2" />
-
     <Card>
-      <div>
-        Hi! I'm Juan Caicedo, I'm a Colombian/Canadian/American full stack JS
-        developer.
-      </div>
+      <AboutMe />
     </Card>
-
     <Card>
       <Blog />
     </Card>
-
     <Card>
       <Talks />
     </Card>

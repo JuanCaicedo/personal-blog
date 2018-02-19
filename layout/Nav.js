@@ -15,6 +15,7 @@ const Nav = () => (
     `}</style>
     <nav className="f6 fw6 ttu tracked mw-100 mw8-ns center pv3 ph4">
       <NavLink href="/">Home</NavLink>
+      <NavLink href="/about">About</NavLink>
       <NavLink href="/blog">Blog</NavLink>
       <NavLink href="/resume">Resume</NavLink>
     </nav>
