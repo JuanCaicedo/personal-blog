@@ -10,7 +10,7 @@ const Post = () => (
         <Card key={i}>
           <div>
             <h3>
-              <Link href={`http://localhost:3000/blog/${slug}`}>
+              <Link href={`/blog/${slug}`}>
                 <a>{title}</a>
               </Link>
             </h3>
