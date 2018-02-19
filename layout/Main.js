@@ -20,7 +20,11 @@ const GhLink = () => (
   </div>
 )
 
-export default ({ children, title = 'This is the default title' }) => (
+export default ({
+  children,
+  title = 'This is the default title',
+  size = 'mw8-ns',
+}) => (
   <div className="helvetica">
     <style jsx>{`
       div {
@@ -45,7 +49,7 @@ export default ({ children, title = 'This is the default title' }) => (
 
     <GhLink />
 
-    <main className="mw-100 mw8-ns center pa3">
+    <main className={`mw-100 center pa3 ${size}`}>
       <div className="mt5">{children}</div>
     </main>
 

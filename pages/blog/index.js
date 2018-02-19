@@ -8,12 +8,14 @@ const Post = () => (
     <div>
       {posts.map(({ title, date, slug }, i) => (
         <Card key={i}>
-          <h3>
-            <Link href={`http://localhost:3000/blog/${slug}`}>
-              <a>{title}</a>
-            </Link>
-          </h3>
-          <div>{date}</div>
+          <div>
+            <h3>
+              <Link href={`http://localhost:3000/blog/${slug}`}>
+                <a>{title}</a>
+              </Link>
+            </h3>
+            <div>{date}</div>
+          </div>
         </Card>
       ))}
     </div>
