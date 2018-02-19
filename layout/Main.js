@@ -21,7 +21,7 @@ const GhLink = () => (
 )
 
 export default ({ children, title = 'This is the default title' }) => (
-  <div className="bg-blue helvetica">
+  <div className="helvetica">
     <style jsx>{`
       div {
         font-size: 18px;
