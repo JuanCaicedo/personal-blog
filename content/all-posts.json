@@ -1,5 +1,10 @@
 [
   {
+    "title": "How to copy the last command run in bash",
+    "slug": "copy-last-command",
+    "date": "April 4, 2018"
+  },
+  {
     "title": "Shortcut for console.log in Spacemacs",
     "slug": "console-log-spacemacs",
     "date": "Feburary 18, 2018"
