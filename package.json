@@ -22,7 +22,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "now"
+    "deploy": "now",
+    "production": "now alias $(pbpaste) juancaicedo.com"
   },
   "repository": {
     "type": "git",
