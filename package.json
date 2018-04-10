@@ -23,7 +23,8 @@
     "build": "next build",
     "start": "next start",
     "deploy": "now",
-    "production": "now alias $(pbpaste) juancaicedo.com"
+    "production": "now alias $(pbpaste) juancaicedo.com",
+    "test": "echo 'No tests yet' && exit 1"
   },
   "repository": {
     "type": "git",
