@@ -17,6 +17,9 @@
     "react-markdown": "^3.2.0",
     "style-loader": "^0.20.2"
   },
+  "engines": {
+    "node": ">=8.9.4 <9"
+  },
   "devDependencies": {},
   "scripts": {
     "dev": "next",
