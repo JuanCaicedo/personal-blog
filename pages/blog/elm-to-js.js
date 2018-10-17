@@ -1,10 +1,10 @@
 import Layout from '../../layout/Main'
-import Content, { meta } from '../../content/elm-to-js.mdx'
+import Content from '../../content/elm-to-js.mdx'
 import Card from '../../components/Card'
 import 'prismjs/themes/prism.css'
 
 const Post = () => (
-  <Layout title={meta.title}>
+  <Layout title="Elm-lite, in javascript">
     <Card>
       <Content />
     </Card>

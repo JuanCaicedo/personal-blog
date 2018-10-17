@@ -4,7 +4,7 @@ import Card from '../../components/Card'
 import 'prismjs/themes/prism.css'
 
 const Post = () => (
-  <Layout title={meta.title}>
+  <Layout title="My most essential tools">
     <Card>
       <Content />
     </Card>

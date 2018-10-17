@@ -1,3 +1,3 @@
-const withCss = require('@zeit/next-css')
-const withMdxc = require('@zeit/next-mdxc')
-module.exports = withMdxc(withCss())
+const withMdx = require('@zeit/next-mdx')();
+const withCSS = require('@zeit/next-css');
+module.exports = withMdx(withCSS());
