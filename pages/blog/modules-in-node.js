@@ -1,10 +1,10 @@
 import Layout from '../../layout/Main'
-import Content, { meta } from '../../content/modules-in-node.mdx'
+import Content from '../../content/modules-in-node.mdx'
 import Card from '../../components/Card'
 import 'prismjs/themes/prism.css'
 
 const Post = () => (
-  <Layout title={meta.title}>
+  <Layout title="Modules in Node">
     <Card>
       <Content />
     </Card>

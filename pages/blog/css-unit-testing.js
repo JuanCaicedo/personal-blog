@@ -1,10 +1,10 @@
 import Layout from '../../layout/Main'
-import Content, { meta } from '../../content/css-unit-testing.mdx'
+import Content from '../../content/css-unit-testing.mdx'
 import Card from '../../components/Card'
 import 'prismjs/themes/prism.css'
 
 const Post = () => (
-  <Layout title={meta.title}>
+  <Layout title="CSS unit testing">
     <Card>
       <Content />
     </Card>

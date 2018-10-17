@@ -1,6 +1,3 @@
----
-title: Shortcut for console.log in Spacemacs
----
 # Shortcut for console.log in Spacemacs
 
 ## Introduction
@@ -31,7 +28,7 @@ mode bindings (through `SPC m` or `,`).
 
 The code for my binding ended up looking like this:
 
-```emacs
+```lisp
 (spacemacs/set-leader-keys-for-major-mode 'rjsx-mode "l" 'insert-console-log)
 ```
 
@@ -44,7 +41,7 @@ any files or restart emacs.
 
 This is what my `insert-console-log` function looks like.
 
-```emacs
+```lisp
 (defun insert-console-log ()
   "Insert console.log of the variable at point."
   (interactive)
