@@ -2,28 +2,10 @@ import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer'
 
-const GhLink = () => (
-  <div className="z-0">
-    <style jsx>{`
-      a {
-        top: 100px;
-        left: -70px;
-      }
-    `}</style>
-
-    <a
-      href="https://github.com/juancaicedo/personal-blog"
-      className="near-white bg-red pv2 ph5 rotate-315 dib fixed near-white link"
-    >
-      Fork me on GitHub
-    </a>
-  </div>
-)
-
 export default ({
   children,
   title = 'This is the default title',
-  size = 'mw8-ns',
+  size = 'mw8-ns'
 }) => (
   <div className="helvetica">
     <style jsx>{`
@@ -46,8 +28,6 @@ export default ({
     </Head>
 
     <Nav />
-
-    <GhLink />
 
     <main className={`mw-100 center pa3 ${size}`}>
       <div className="mt5">{children}</div>
