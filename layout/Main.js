@@ -26,7 +26,7 @@ export default ({ children, title = 'This is the default title' }) => (
     <Nav />
 
     <main className="p-4">
-      <div className="mt-16">{children}</div>
+      <div className="mt-24">{children}</div>
     </main>
 
     <Footer>Footer</Footer>
