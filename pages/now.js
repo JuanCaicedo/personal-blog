@@ -4,13 +4,13 @@ import Link from 'next/link'
 import Layout from '../layout/Main'
 import Card from '../components/Card'
 
-const ActivityItem = ({ text }) => <li className="text-4xl">{`${text}`}</li>
+const ActivityItem = ({ text }) => <li className="text-xl">{`${text}`}</li>
 
 const ActivityList = ({ activities, title }) => {
   return (
     <Card>
       <div>
-        <h2 className="text-5xl mb-4">{title}</h2>
+        <h2 className="text-2xl mb-4">{title}</h2>
         <ul>
           {R.map(activity => <ActivityItem text={activity} />, activities)}
         </ul>
@@ -47,9 +47,14 @@ const Page = () => (
         'Motorcycle Diaries'
       ]}
     />
-    <Card className="text-4xl">
-      You might also be interested in more <Link href="/about">about me</Link>,
-      or maybe my <Link href="/resume">resume</Link>.
+    <Card className="text-xl">
+      You might also be interested in more{' '}
+      <Link href="/about">
+        <a className="text-xl">about me</a>
+      </Link>, or maybe my{' '}
+      <Link href="/resume">
+        <a className="text-xl">resume</a>
+      </Link>.
     </Card>
   </Layout>
 )
