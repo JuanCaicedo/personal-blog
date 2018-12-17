@@ -1,0 +1,53 @@
+/*
+ * The reason these styles exist are to work around the fact that styled doesn't
+ * apply easily to global classes and we can't use utility classes because of
+ * how the markdown is generated.
+ */
+.juan-blog p {
+  padding-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.juan-blog h1 {
+  padding-bottom: 5rem;
+  font-size: 5rem;
+}
+
+.juan-blog h2 {
+  padding-bottom: 4rem;
+  font-size: 4rem;
+}
+
+html * {
+  font-size: 2rem;
+}
+
+@media (min-width: 750px) {
+  .juan-blog p {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .juan-blog h2 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .juan-blog h1 {
+    padding-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  html * {
+    font-size: 1rem;
+  }
+}
+
+.juan-blog a {
+  font-weight: 600;
+  color: #ff4136;
+  text-decoration: none;
+}
+.juan-blog a:hover {
+  text-decoration: underline;
+}
