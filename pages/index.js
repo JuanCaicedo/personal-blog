@@ -16,7 +16,7 @@ const Page = () => (
 
     <Card>
       <div>
-        Hi! I'm Juan Caicedo, I'm a Colombian/Canadian/American full stack JS
+        Hi! I'm Juan Caicedo, a Colombian/Canadian/American full stack JS
         developer.
       </div>
     </Card>
