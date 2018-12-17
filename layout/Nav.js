@@ -13,7 +13,7 @@ const Nav = () => (
         color: #f4f4f4;
       }
     `}</style>
-    <nav className="text-base sm:text-2xl py-3 px-4 flex">
+    <nav className="text-base sm:text-2xl py-3 px-8 flex container mx-auto">
       <NavLink href="/">Home</NavLink>
       <NavLink href="/now">Now</NavLink>
       <NavLink href="/blog">Blog</NavLink>

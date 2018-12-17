@@ -42,12 +42,3 @@ html * {
     font-size: 1rem;
   }
 }
-
-.juan-blog a {
-  font-weight: 600;
-  color: #ff4136;
-  text-decoration: none;
-}
-.juan-blog a:hover {
-  text-decoration: underline;
-}
