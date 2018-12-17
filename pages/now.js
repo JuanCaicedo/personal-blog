@@ -22,11 +22,10 @@ const Page = () => (
   <Layout title="What I'm doing now">
     <style jsx>{`
       .title {
-        border: 1px solid red;
         text-align: center;
       }
     `}</style>
-    <h1 className="title">Now</h1>
+    <h1 className="title">What I'm doing now</h1>
     <ActivityList
       title="My life at a glance"
       activities={[
@@ -40,7 +39,8 @@ const Page = () => (
       activities={[
         'Speak at JSConf EU',
         'Compose a rock opera',
-        'Write all content in spanish and english'
+        'Write all content in Spanish and English',
+        'Attend the Recurse Center'
       ]}
     />
     <ActivityList
