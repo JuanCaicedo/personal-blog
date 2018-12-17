@@ -1,4 +1,5 @@
 import * as R from 'ramda';
+import Link from 'next/link';
 
 import Layout from '../layout/Main';
 import Card from '../components/Card';
@@ -51,6 +52,10 @@ const Page = () => (
         'Motorcycle Diaries'
       ]}
     />
+    <Card>
+      You might also be interested in more <Link href="/about">about me</Link>,
+      or maybe my <Link href="/resume">resume</Link>.
+    </Card>
   </Layout>
 );
 
