@@ -18,6 +18,25 @@ export default ({ children, title = 'This is the default title' }) => (
       :global(html *) {
         font-size: 2rem;
       }
+
+      :global(.juan-blog p) {
+        padding-bottom: 3rem;
+        font-size: 3rem;
+      }
+
+      :global(.juan-blog a) {
+        font-size: 3rem;
+      }
+
+      :global(.juan-blog h1) {
+        padding-bottom: 5rem;
+        font-size: 5rem;
+      }
+
+      :global(.juan-blog h2) {
+        padding-bottom: 4rem;
+        font-size: 4rem;
+      }
     `}</style>
     <Head>
       <title>{title}</title>
