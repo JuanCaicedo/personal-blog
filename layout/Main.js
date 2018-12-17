@@ -2,17 +2,9 @@ import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer'
 
-export default ({
-  children,
-  title = 'This is the default title',
-  size = 'mw8-ns'
-}) => (
+export default ({ children, title = 'This is the default title' }) => (
   <div className="helvetica">
     <style jsx>{`
-      div {
-        font-size: 18px;
-      }
-
       :global(a) {
         font-weight: 600;
         color: #ff4136;
@@ -22,6 +14,10 @@ export default ({
       :global(a:hover) {
         text-decoration: underline;
       }
+
+      :global(html *) {
+        font-size: 2rem;
+      }
     `}</style>
     <Head>
       <title>{title}</title>
@@ -29,8 +25,8 @@ export default ({
 
     <Nav />
 
-    <main className={`mw-100 center pa3 ${size}`}>
-      <div className="mt5">{children}</div>
+    <main className="p-4">
+      <div className="mt-16">{children}</div>
     </main>
 
     <Footer>Footer</Footer>

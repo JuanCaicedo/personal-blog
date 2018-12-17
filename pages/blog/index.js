@@ -4,8 +4,9 @@ import posts from '../../content/all-posts'
 import Card from '../../components/Card'
 
 const Post = () => (
-  <Layout title="blog">
-    <div>
+  <Layout title="Blog">
+    <h1 className="mb-8 text-center">Previous posts</h1>
+    <>
       {posts.map(({ title, date, slug }, i) => (
         <Card key={i}>
           <div>
@@ -18,7 +19,7 @@ const Post = () => (
           </div>
         </Card>
       ))}
-    </div>
+    </>
   </Layout>
 )
 

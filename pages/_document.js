@@ -6,8 +6,8 @@ export default class MyDocument extends Document {
       <html className="bg-blue">
         <Head>
           <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
             rel="stylesheet"
-            href="https://unpkg.com/tachyons/css/tachyons.min.css"
           />
         </Head>
         <body>
