@@ -13,7 +13,7 @@ export default ({ children, title = 'This is the default title' }) => (
     <Nav />
 
     <main className="p-4">
-      <div className="mt-24 max-w-2xl mx-auto">{children}</div>
+      <div className="mt-12 max-w-2xl mx-auto">{children}</div>
     </main>
 
     <Footer>Footer</Footer>
