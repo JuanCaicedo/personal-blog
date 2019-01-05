@@ -1,5 +1,5 @@
-const Card = ({ children, header }) => (
-  <div className="bg-yellow pa3 mb3 br2 card">
+const Card = ({ children, header, className = '' }) => (
+  <div className={`bg-yellow pa3 mb3 br2 card ${className}`}>
     <style jsx>{`
       .card :global(div:first-child > :first-child) {
         margin-top: 0;
