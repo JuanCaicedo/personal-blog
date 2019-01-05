@@ -2,7 +2,7 @@ import Layout from '../layout/Main';
 import Card from '../components/Card';
 
 const Page = () => (
-  <Layout>
+  <Layout title="Guatemala">
     <style jsx>{`
       :global(.card) {
         text-align: center;
