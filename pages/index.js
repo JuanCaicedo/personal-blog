@@ -6,13 +6,10 @@ import Blog from '../content/blog.mdx'
 
 const Page = () => (
   <Layout title="Juan Caicedo">
-    <style jsx>{`
-      img {
-        width: 250px;
-      }
-    `}</style>
-
-    <img src="/static/juan.jpg" className="center db mb4 overflow-hidden br2" />
+    <img
+      src="/static/juan.jpg"
+      className="center db mb4 overflow-hidden br2 w-2/3 block m-auto mb-6"
+    />
 
     <Card>
       <div>
