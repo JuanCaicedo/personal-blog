@@ -15,20 +15,16 @@ const Page = () => (
   <Layout title="Juan Caicedo">
     <style jsx>{`
       .content {
-        width: 450px;
+        max-width: 450px;
       }
     `}</style>
     <img
       src="/static/juan.jpg"
-      className="center db mb4 overflow-hidden br2 block m-auto mb-6 w-64"
+      className="center db mb4 overflow-hidden br2 block m-auto mb-6 w-32 md:w-64 rounded-lg"
     />
 
     <div className="content m-auto">
-      {Cards.map((content, i) => (
-        <Card className="ser center" key={`card-${i}`}>
-          {content}
-        </Card>
-      ))}
+      {Cards.map((content, i) => <Card key={`card-${i}`}>{content}</Card>)}
     </div>
   </Layout>
 )
