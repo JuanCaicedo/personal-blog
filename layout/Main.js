@@ -1,36 +1,22 @@
 import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer'
+import './blog.css'
+import './global.css'
 
-export default ({
-  children,
-  title = 'This is the default title',
-  size = 'mw8-ns'
-}) => (
-  <div className="helvetica">
-    <style jsx>{`
-      div {
-        font-size: 18px;
-      }
-
-      :global(a) {
-        font-weight: 600;
-        color: #ff4136;
-        text-decoration: none;
-      }
-
-      :global(a:hover) {
-        text-decoration: underline;
-      }
-    `}</style>
+export default ({ children, title = 'This is the default title' }) => (
+  <div className="font-sans">
     <Head>
       <title>{title}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
 
     <Nav />
 
-    <main className={`mw-100 center pa3 ${size}`}>
-      <div className="mt5">{children}</div>
+    <main className="p-4">
+      <div className="mt-12 max-w-lg mx-auto flex flex-col items-center">
+        {children}
+      </div>
     </main>
 
     <Footer>Footer</Footer>

@@ -5,7 +5,7 @@ import 'prismjs/themes/prism.css'
 
 const Post = () => (
   <Layout title="Tailored CSS">
-    <Card>
+    <Card className="juan-blog">
       <Content />
     </Card>
   </Layout>

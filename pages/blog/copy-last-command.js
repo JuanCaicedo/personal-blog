@@ -5,7 +5,7 @@ import 'prismjs/themes/prism.css'
 
 const Post = () => (
   <Layout title="How to copy last command in bash">
-    <Card>
+    <Card className="juan-blog">
       <Content />
     </Card>
   </Layout>

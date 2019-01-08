@@ -1,19 +1,19 @@
 import Link from 'next/link'
 
-const NavLink = ({ href, children, className }) => (
+const NavLink = ({ href, children, className = '' }) => (
   <Link href={href}>
-    <a className={`link dib mr3 ${className}`}>{children}</a>
+    <a className={`mr-3 ${className}`}>{children}</a>
   </Link>
 )
 
 const Nav = () => (
-  <header className="bg-red fixed w-100 z-1 ">
+  <header className="bg-red fixed w-full z-10">
     <style jsx>{`
       nav :global(a) {
         color: #f4f4f4;
       }
     `}</style>
-    <nav className="f6-m fw6-m ttu tracked mw-100 mw8-ns center pv3 ph4 flex">
+    <nav className="py-3 flex mx-auto max-w-lg px-8 md:px-0">
       <NavLink href="/">Home</NavLink>
       <NavLink href="/now">Now</NavLink>
       <NavLink href="/blog">Blog</NavLink>

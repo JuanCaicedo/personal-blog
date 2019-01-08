@@ -5,7 +5,7 @@ import 'prismjs/themes/prism.css'
 
 const Post = () => (
   <Layout title="Shortcut for console.log in Spacemacs">
-    <Card>
+    <Card className="juan-blog">
       <Content />
     </Card>
   </Layout>

@@ -5,7 +5,7 @@ import 'prismjs/themes/prism.css'
 
 const Post = () => (
   <Layout title="My most essential tools">
-    <Card>
+    <Card className="juan-blog">
       <Content />
     </Card>
   </Layout>
