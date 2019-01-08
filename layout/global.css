@@ -1,3 +1,11 @@
+@tailwind preflight;
+@tailwind screens;
+@tailwind utilities;
+@tailwind components;
+
+body {
+  @apply bg-blue;
+}
 a {
   font-weight: 600;
   color: #ff4136;

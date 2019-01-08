@@ -5,12 +5,7 @@ export default class MyDocument extends Document {
     return (
       <html className="bg-blue">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <Head>
-          <link
-            href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

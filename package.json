@@ -22,7 +22,12 @@
   "engines": {
     "node": ">=8.9.4 <9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "cssnano": "^4.1.8",
+    "postcss-easy-import": "^3.0.0",
+    "tailwindcss": "^0.7.3"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
