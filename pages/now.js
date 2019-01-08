@@ -8,7 +8,7 @@ const ActivityItem = ({ text }) => <li className="text-xl">{`${text}`}</li>
 
 const ActivityList = ({ activities, title }) => {
   return (
-    <Card>
+    <Card className="w-full">
       <div>
         <h2 className="text-2xl mb-4">{title}</h2>
         <ul>
@@ -47,7 +47,7 @@ const Page = () => (
         'Motorcycle Diaries'
       ]}
     />
-    <Card className="text-xl">
+    <Card className="text-xl w-full">
       You might also be interested in more{' '}
       <Link href="/about">
         <a className="text-xl">about me</a>
