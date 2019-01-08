@@ -15,7 +15,7 @@
     "prismjs": "^1.15.0",
     "ramda": "^0.26.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.7.0",
     "react-markdown": "^3.2.0",
     "style-loader": "^0.20.2"
   },
