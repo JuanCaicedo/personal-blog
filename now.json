@@ -1,4 +1,8 @@
 {
+  "version": 2,
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
   "alias": "juancaicedo.com",
   "name": "personal-blog"
 }
