@@ -1,5 +1,6 @@
 const { send } = require('micro')
 const { router, get } = require('microrouter')
+const cors = require('micro-cors')()
 const fs = require('fs')
 const path = require('path')
 const util = require('util')
@@ -32,4 +33,4 @@ const list = async (req, res) => {
 }
 const notfound = async (req, res) => send(res, 404, 'Not found route')
 
-module.exports = router(get('/list', list), get('/*', notfound))
+module.exports = router(get('/list', cors(list)), get('/*', notfound))
