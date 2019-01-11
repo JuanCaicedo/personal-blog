@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 import Layout from '../layout/Main'
 import Card from '../components/Card'
 import AboutMe from '../content/about-me.mdx'
@@ -11,7 +13,8 @@ const Cards = [
   <Blog />,
   <Talks />
 ]
-const Page = () => (
+
+const Page = ({ json }) => (
   <Layout title="Juan Caicedo">
     <img
       src="/static/juan.jpg"
@@ -19,9 +22,22 @@ const Page = () => (
     />
 
     <div>
+      {json.time}
       {Cards.map((content, i) => <Card key={`card-${i}`}>{content}</Card>)}
     </div>
   </Layout>
 )
+
+Page.getInitialProps = async ({ req }) => {
+  try {
+    const baseUrl = `${process.env.API_URL}/api/blog`
+    const response = await axios(baseUrl)
+    const json = response.data
+    return { json }
+  } catch (e) {
+    console.error('e', e)
+    return {}
+  }
+}
 
 export default Page
