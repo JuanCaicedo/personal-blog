@@ -14,7 +14,7 @@ const Cards = [
   <Talks />
 ]
 
-const Page = ({ json }) => (
+const Page = ({ json, list }) => (
   <Layout title="Juan Caicedo">
     <img
       src="/static/juan.jpg"
@@ -27,12 +27,20 @@ const Page = ({ json }) => (
   </Layout>
 )
 
+const getList = async req => {
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? `${process.env.API_URL}/api/blog/list`
+      : `${process.env.API_URL}/list`
+  const response = await axios(baseUrl)
+  const json = response.data
+  return json
+}
+
 Page.getInitialProps = async ({ req }) => {
   try {
-    const baseUrl = `${process.env.API_URL}/api/blog`
-    const response = await axios(baseUrl)
-    const json = response.data
-    return { json }
+    const list = await getList(req)
+    return { list }
   } catch (e) {
     console.error('e', e)
     return {}
