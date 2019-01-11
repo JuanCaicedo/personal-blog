@@ -8,15 +8,14 @@ const fm = require('front-matter')
 const readDirAsync = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
 
-const contentPath = path.resolve(__dirname, '../content')
+const postsPath = path.resolve(__dirname, '../posts')
 
 const listAllPosts = async () => {
-  const fileNames = await readDirAsync(contentPath)
+  const fileNames = await readDirAsync(postsPath)
   const fileContents = await Promise.all(
-    fileNames.map(name => readFile(`${contentPath}/${name}`, 'utf8'))
+    fileNames.map(name => readFile(`${postsPath}/${name}`, 'utf8'))
   )
   const result = fileContents.map(file => fm(file)).map(file => {
-    console.log('file', file)
     return file.attributes
   })
 

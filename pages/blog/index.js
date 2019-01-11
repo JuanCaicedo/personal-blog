@@ -2,7 +2,6 @@ import axios from 'axios'
 
 import Link from 'next/link'
 import Layout from '../../layout/Main'
-import posts from '../../content/all-posts'
 import Card from '../../components/Card'
 
 const Post = ({ posts }) => (
@@ -36,7 +35,6 @@ const getPosts = async req => {
 Post.getInitialProps = async ({ req }) => {
   try {
     const posts = await getPosts(req)
-    console.log('posts', posts)
     return { posts }
   } catch (e) {
     console.error('e', e)
