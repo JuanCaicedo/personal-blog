@@ -25,7 +25,7 @@ const getPost = async (slug, req) => {
 
 Post.getInitialProps = async ({ req }) => {
   try {
-    const { content } = await getPost('copy-last-command', req)
+    const { content } = await getPost(req.params.slug, req)
     return { content }
   } catch (e) {
     console.error('e', e)

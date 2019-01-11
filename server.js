@@ -22,7 +22,11 @@ app
     server.get('/blog/:slug', (req, res) => {
       const queryParams = { slug: req.params.slug }
 
-      app.render(req, res, '/blog', queryParams)
+      app.render(req, res, '/blog/post', queryParams)
+    })
+
+    server.get('/blog/', (req, res) => {
+      app.render(req, res, '/blog')
     })
 
     server.get('*', (req, res) => {
