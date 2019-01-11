@@ -5,6 +5,7 @@ const fs = require('fs')
 const path = require('path')
 const util = require('util')
 const fm = require('front-matter')
+const dateFns = require('date-fns')
 
 const readDirAsync = util.promisify(fs.readdir)
 const readFileAsync = util.promisify(fs.readFile)
@@ -38,7 +39,11 @@ const findPostBySlug = async (req, res) => {
 const list = async (req, res) => {
   try {
     const all = await listAllPosts()
-    send(res, 200, all)
+    const sorted = all.sort(({ date }, { date: previousDate }) =>
+      dateFns.isBefore(dateFns.parse(date), dateFns.parse(previousDate))
+    )
+
+    send(res, 200, sorted)
   } catch (e) {
     console.error('Error in reading posts', e)
   }
