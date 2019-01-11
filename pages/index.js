@@ -22,7 +22,6 @@ const Page = ({ json }) => (
     />
 
     <div>
-      {json.time}
       {Cards.map((content, i) => <Card key={`card-${i}`}>{content}</Card>)}
     </div>
   </Layout>
