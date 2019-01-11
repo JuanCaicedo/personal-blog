@@ -25,9 +25,11 @@ const Post = ({ posts }) => (
 const getPosts = async req => {
   const baseUrl =
     process.env.NODE_ENV === 'production'
-      ? `${process.env.API_URL}/api/blog/list`
-      : `${process.env.API_URL}/list`
-  const response = await axios(baseUrl)
+      ? `${process.env.API_PROTOCOL}://${req.headers.host}:${
+          process.env.API_PORT
+        }/api/blog`
+      : `${process.env.API_PROTOCOL}://localhost:${process.env.API_PORT}`
+  const response = await axios(`${baseUrl}/list`)
   const json = response.data
   return json
 }
