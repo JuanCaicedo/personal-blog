@@ -13,8 +13,11 @@ const postsPath = path.resolve(__dirname, '../posts')
 
 const listAllPosts = async () => {
   const fileNames = await readDirAsync(postsPath)
+
   const fileContents = await Promise.all(
-    fileNames.map(name => readFile(`${postsPath}/${name}`, 'utf8'))
+    fileNames
+      .filter(name => /mdx$/.test(name))
+      .map(name => readFile(`${postsPath}/${name}`, 'utf8'))
   )
   const result = fileContents.map(file => fm(file)).map(file => {
     return file.attributes
