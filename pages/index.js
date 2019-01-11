@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 import Layout from '../layout/Main'
 import Card from '../components/Card'
 import AboutMe from '../content/about-me.mdx'
@@ -26,25 +24,5 @@ const Page = ({ json, list }) => (
     </div>
   </Layout>
 )
-
-const getList = async req => {
-  const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? `${process.env.API_URL}/api/blog/list`
-      : `${process.env.API_URL}/list`
-  const response = await axios(baseUrl)
-  const json = response.data
-  return json
-}
-
-Page.getInitialProps = async ({ req }) => {
-  try {
-    const list = await getList(req)
-    return { list }
-  } catch (e) {
-    console.error('e', e)
-    return {}
-  }
-}
 
 export default Page
