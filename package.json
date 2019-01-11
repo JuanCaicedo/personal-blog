@@ -10,6 +10,7 @@
     "axios": "^0.18.0",
     "babel-plugin-transform-define": "^1.3.1",
     "css-loader": "^0.28.9",
+    "express": "^4.16.4",
     "front-matter": "^3.0.1",
     "markdown-in-js": "^1.1.3",
     "mdxc": "^1.1.1",
@@ -17,7 +18,9 @@
     "micro-cors": "^0.1.1",
     "micro-dev": "^3.0.0",
     "microrouter": "^3.1.3",
+    "minimist": "^1.2.0",
     "next": "^8.0.0-canary.3",
+    "nodemon": "^1.18.9",
     "now-lambda-runner": "^2.0.0",
     "postcss-loader": "^2.1.0",
     "prismjs": "^1.15.0",
@@ -37,10 +40,10 @@
     "tailwindcss": "^0.7.3"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "dev:api": "micro-dev api/blog.js -p 7000",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "deploy": "now",
     "production": "now alias $(pbpaste) juancaicedo.com",
     "now-build": "next build"
