@@ -1,4 +1,5 @@
-const getDomain = href => href.replace(/https?:\/\/(.*?)\/.*/, '$1')
+const getDomain = href =>
+  href.replace(/https?:\/\/(.*?)\/.*/, '$1').replace(/:\d+/, '')
 
 export const getUrl = (env, req, href = '') => {
   const { NODE_ENV, API_PROTOCOL, API_PORT } = env
@@ -9,7 +10,7 @@ export const getUrl = (env, req, href = '') => {
           path: '/api/blog'
         }
       : {
-          host: 'localhost',
+          host: req ? req.headers.host : getDomain(href),
           path: ''
         }
   return `${API_PROTOCOL}://${host}${API_PORT}${path}`
