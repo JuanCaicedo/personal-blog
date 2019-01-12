@@ -1,8 +1,9 @@
 import axios from 'axios'
-
 import Link from 'next/link'
+
 import Layout from '../../layout/Main'
 import Card from '../../components/Card'
+import Data from '../../util/data'
 
 const Post = ({ posts }) => (
   <Layout title="Blog">
@@ -22,22 +23,8 @@ const Post = ({ posts }) => (
   </Layout>
 )
 
-const getUrl = (process, req, window) => {
-  const { host, path } =
-    process.env.NODE_ENV === 'production'
-      ? {
-          host: req ? req.headers.host : window.location.href,
-          path: '/api/blog'
-        }
-      : {
-          host: 'localhost',
-          path: ''
-        }
-  return `${process.env.API_PROTOCOL}://${host}${process.env.API_PORT}${path}`
-}
-
 const getPosts = async req => {
-  const baseUrl = getUrl(process, req, window)
+  const baseUrl = Data.getUrl(process, req, window)
   const response = await axios(`${baseUrl}/list`)
   const json = response.data
   return json
