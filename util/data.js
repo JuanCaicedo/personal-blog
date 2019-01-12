@@ -1,8 +1,11 @@
-export const getUrl = ({ NODE_ENV, API_PROTOCOL, API_PORT }, req, window) => {
+const getDomain = href => href.replace(/https?:\/\/(.*?)\/.*/, '$1')
+
+export const getUrl = (env, req, href = '') => {
+  const { NODE_ENV, API_PROTOCOL, API_PORT } = env
   const { host, path } =
     NODE_ENV === 'production'
       ? {
-          host: req ? req.headers.host : window.location.href,
+          host: req ? req.headers.host : getDomain(href),
           path: '/api/blog'
         }
       : {
