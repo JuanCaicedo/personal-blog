@@ -4,12 +4,7 @@ import Link from 'next/link'
 import Layout from '../../layout/Main'
 import Card from '../../components/Card'
 import * as Data from '../../util/data'
-
-const env = {
-  NODE_ENV: process.env.NODE_ENV,
-  API_PROTOCOL: process.env.API_PROTOCOL,
-  API_PORT: process.env.API_PORT
-}
+import env from '../../util/env'
 
 const Post = ({ posts = [] }) => (
   <Layout title="Blog">

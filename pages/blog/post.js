@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import Layout from '../../layout/Main'
 import Card from '../../components/Card'
+import * as Data from '../../util/data'
+import env from '../../util/env'
 import 'prismjs/themes/prism.css'
 
 const Post = ({ content }) => (
@@ -14,12 +16,7 @@ const Post = ({ content }) => (
 )
 
 const getPost = async (slug, req) => {
-  const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? `${process.env.API_PROTOCOL}://${req.headers.host}${
-          process.env.API_PORT
-        }/api/blog`
-      : `${process.env.API_PROTOCOL}://localhost${process.env.API_PORT}`
+  const baseUrl = Data.getUrl(env, req, req ? {} : window.location)
   const response = await axios(`${baseUrl}/${slug}`)
   const json = response.data
   return json
