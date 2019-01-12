@@ -12,17 +12,19 @@ const Cards = [
   <Talks />
 ]
 
-const Page = ({ json, list }) => (
-  <Layout title="Juan Caicedo">
-    <img
-      src="/static/juan.jpg"
-      className="center db mb4 overflow-hidden br2 block m-auto mb-6 w-32 rounded-lg"
-    />
+const Page = ({ json, list }) => {
+  return (
+    <Layout title="Juan Caicedo">
+      <img
+        src="/static/juan.jpg"
+        className="center db mb4 overflow-hidden br2 block m-auto mb-6 w-32 rounded-lg"
+      />
 
-    <div>
-      {Cards.map((content, i) => <Card key={`card-${i}`}>{content}</Card>)}
-    </div>
-  </Layout>
-)
+      <div>
+        {Cards.map((content, i) => <Card key={`card-${i}`}>{content}</Card>)}
+      </div>
+    </Layout>
+  )
+}
 
 export default Page
