@@ -10,7 +10,7 @@ import 'prismjs/themes/prism.css'
 const Post = ({ content }) => (
   <Layout title="How to copy last command in bash">
     <Card className="juan-blog">
-      <ReactMarkdown source={content} />,
+      <ReactMarkdown source={content} />
     </Card>
   </Layout>
 )
