@@ -48,7 +48,8 @@
     "start": "NODE_ENV=production node server.js",
     "deploy": "now",
     "production": "now alias $(pbpaste) juancaicedo.com",
-    "now-build": "next build"
+    "now-build": "next build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

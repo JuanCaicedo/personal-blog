@@ -1,6 +1,6 @@
-export const getUrl = (process, req, window) => {
+export const getUrl = ({ NODE_ENV, API_PROTOCOL, API_PORT }, req, window) => {
   const { host, path } =
-    process.env.NODE_ENV === 'production'
+    NODE_ENV === 'production'
       ? {
           host: req ? req.headers.host : window.location.href,
           path: '/api/blog'
@@ -9,5 +9,5 @@ export const getUrl = (process, req, window) => {
           host: 'localhost',
           path: ''
         }
-  return `${process.env.API_PROTOCOL}://${host}${process.env.API_PORT}${path}`
+  return `${API_PROTOCOL}://${host}${API_PORT}${path}`
 }
