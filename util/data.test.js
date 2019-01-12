@@ -15,7 +15,7 @@ describe('getUrl', () => {
       getUrl(
         { NODE_ENV: 'production', API_PROTOCOL: 'protocol', API_PORT: '' },
         undefined,
-        'https://href.now.sh/blog'
+        { href: 'https://href.now.sh/blog' }
       )
     ).toEqual('protocol://href.now.sh/api/blog')
   })
@@ -28,9 +28,9 @@ describe('getUrl', () => {
           API_PROTOCOL: 'protocol',
           API_PORT: ':port'
         },
-        { headers: { host: 'host' } }
+        { headers: { host: 'localhost:2000' } }
       )
-    ).toEqual('protocol://host:port')
+    ).toEqual('protocol://localhost:port')
   })
 
   it('works for development client side', () => {
@@ -42,7 +42,7 @@ describe('getUrl', () => {
           API_PORT: ':7000'
         },
         undefined,
-        'https://localhost:2000/blog'
+        { href: 'https://localhost:2000/blog' }
       )
     ).toEqual('protocol://localhost:7000')
   })

@@ -3,9 +3,15 @@ import Link from 'next/link'
 
 import Layout from '../../layout/Main'
 import Card from '../../components/Card'
-import Data from '../../util/data'
+import * as Data from '../../util/data'
 
-const Post = ({ posts }) => (
+const env = {
+  NODE_ENV: process.env.NODE_ENV,
+  API_PROTOCOL: process.env.API_PROTOCOL,
+  API_PORT: process.env.API_PORT
+}
+
+const Post = ({ posts = [] }) => (
   <Layout title="Blog">
     <h1 className="mb-8 text-center">Previous posts</h1>
     {posts.map(({ title, date, slug }, i) => (
@@ -24,7 +30,7 @@ const Post = ({ posts }) => (
 )
 
 const getPosts = async req => {
-  const baseUrl = Data.getUrl(process, req, window)
+  const baseUrl = Data.getUrl(env, req, req ? {} : window.location)
   const response = await axios(`${baseUrl}/list`)
   const json = response.data
   return json
