@@ -7,7 +7,7 @@ export const getUrl = (env, req, location) => {
     env.NODE_ENV === 'production'
       ? {
           host: req ? getDomain(req.headers.host) : getDomain(location.href),
-          path: '/api/'
+          path: '/api'
         }
       : {
           host: req ? getDomain(req.headers.host) : getDomain(location.href),
