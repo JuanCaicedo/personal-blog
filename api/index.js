@@ -51,7 +51,7 @@ const list = async (req, res) => {
 const notfound = async (req, res) => send(res, 404, 'Not found route')
 
 module.exports = router(
-  get('/list', cors(list)),
-  get('/:slug', cors(findPostBySlug)),
+  get('/blog/list', cors(list)),
+  get('/blog/:slug', cors(findPostBySlug)),
   get('/*', notfound)
 )
