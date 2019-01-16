@@ -21,9 +21,10 @@ const listAllPosts = async () => {
       .filter(name => /mdx$/.test(name))
       .map(name => readFileAsync(`${postsPath}/${name}`, 'utf8'))
   )
-  const result = fileContents.map(file => fm(file)).map(file => {
-    return file.attributes
-  })
+  const result = fileContents.map(file => fm(file)).map(file => ({
+    ...file.attributes,
+    body: file.body
+  }))
 
   return result
 }
@@ -41,7 +42,11 @@ const blogApi = async (req, res) => {
     }
 
     const post = sorted.filter(post => post.slug === slug)[0]
-    return send(res, 200)
+    if (!post) {
+      return send(res, 404, 'Not found route')
+    }
+
+    return send(res, 200, post)
   } catch (e) {
     console.error('Error in reading posts', e)
   }

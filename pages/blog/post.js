@@ -17,17 +17,15 @@ const Post = ({ content }) => (
 
 const getPost = async (slug, req) => {
   const baseUrl = Data.getUrl(env, req, req ? {} : window.location)
-  console.log('`${baseUrl}/?slug=${slug}`', `${baseUrl}/?slug=${slug}`)
   const response = await axios(`${baseUrl}/?slug=${slug}`)
   const json = response.data
-  console.log('json', json)
   return json
 }
 
 Post.getInitialProps = async ({ req }) => {
   try {
-    const { content } = await getPost(req.params.slug, req)
-    return { content }
+    const { body } = await getPost(req.params.slug, req)
+    return { content: body }
   } catch (e) {
     console.error('e', e)
     return {}
