@@ -19,6 +19,7 @@
     "micro": "^9.3.3",
     "micro-cors": "^0.1.1",
     "micro-dev": "^3.0.0",
+    "micro-query": "^0.3.0",
     "microrouter": "^3.1.3",
     "minimist": "^1.2.0",
     "next": "^8.0.0-canary.3",
@@ -43,7 +44,7 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "dev:api": "micro-dev api/blog.js -p 7000",
+    "dev:api": "micro-dev api/index.js -p 7000",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "deploy": "now",

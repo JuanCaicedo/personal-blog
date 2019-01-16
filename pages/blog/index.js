@@ -26,7 +26,7 @@ const Post = ({ posts = [] }) => (
 
 const getPosts = async req => {
   const baseUrl = Data.getUrl(env, req, req ? {} : window.location)
-  const response = await axios(`${baseUrl}/list`)
+  const response = await axios(`${baseUrl}/`)
   const json = response.data
   return json
 }
