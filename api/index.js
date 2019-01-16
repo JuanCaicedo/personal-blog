@@ -1,5 +1,4 @@
 const { send } = require('micro')
-const { router, get } = require('microrouter')
 const cors = require('micro-cors')()
 const fs = require('fs')
 const path = require('path')
@@ -11,7 +10,7 @@ const query = require('micro-query')
 const readDirAsync = util.promisify(fs.readdir)
 const readFileAsync = util.promisify(fs.readFile)
 
-const postsPath = path.resolve(__dirname, '../posts')
+const postsPath = path.resolve(__dirname, './posts')
 
 const listAllPosts = async () => {
   const fileNames = await readDirAsync(postsPath)
