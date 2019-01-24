@@ -1,9 +1,12 @@
+import axios from 'axios'
 import Link from 'next/link'
-import Layout from '../../layout/Main'
-import posts from '../../content/all-posts'
-import Card from '../../components/Card'
 
-const Post = () => (
+import Layout from '../../layout/Main'
+import Card from '../../components/Card'
+import * as Data from '../../util/data'
+import env from '../../util/env'
+
+const Post = ({ posts = [] }) => (
   <Layout title="Blog">
     <h1 className="mb-8 text-center">Previous posts</h1>
     {posts.map(({ title, date, slug }, i) => (
@@ -20,5 +23,22 @@ const Post = () => (
     ))}
   </Layout>
 )
+
+const getPosts = async req => {
+  const baseUrl = Data.getUrl(env, req, req ? {} : window.location)
+  const response = await axios(`${baseUrl}/`)
+  const json = response.data
+  return json
+}
+
+Post.getInitialProps = async ({ req }) => {
+  try {
+    const posts = await getPosts(req)
+    return { posts }
+  } catch (e) {
+    console.error('e', e)
+    return {}
+  }
+}
 
 export default Post

@@ -4,6 +4,7 @@ import AboutMe from '../content/about-me.mdx'
 import Talks from '../content/conference-talks.mdx'
 import Blog from '../content/blog.mdx'
 
+
 const Page = () => (
   <Layout title="Juan Caicedo">
     <style jsx>{`

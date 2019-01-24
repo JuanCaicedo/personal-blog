@@ -1,7 +1,32 @@
 {
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@now/next" }
+    { "src": "www/package.json", "use": "@now/next" },
+    { "src": "api/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    {
+      "src": "^/api/(.*)$",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "^/blog/$",
+      "dest": "/www/blog/index.js"
+    },
+    {
+      "src": "^/blog/(.+)$",
+      "dest": "/www/blog/post?slug=$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/www/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    }
   ],
   "alias": "juancaicedo.com",
   "name": "personal-blog"
