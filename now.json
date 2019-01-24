@@ -29,5 +29,6 @@
     }
   ],
   "alias": "juancaicedo.com",
-  "name": "personal-blog"
+  "name": "personal-blog",
+  "public": true
 }

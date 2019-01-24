@@ -39,9 +39,8 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "dev:api": "micro-dev api/index.js -p 7000",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "next start",
     "deploy": "now",
     "production": "now alias $(pbpaste) juancaicedo.com",
     "now-build": "next build",
