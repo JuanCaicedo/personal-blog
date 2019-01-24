@@ -6,18 +6,22 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "^/api/(.*)$",
       "dest": "/api/index.js"
     },
     {
-      "src": "/blog/(.+)",
-      "dest": "/www/blog.js?slug=$1",
+      "src": "^/blog/$",
+      "dest": "/www/blog/index.js"
+    },
+    {
+      "src": "^/blog/(.+)$",
+      "dest": "/www/blog/post?slug=$1",
       "headers": {
         "x-request-path": "$1"
       }
     },
     {
-      "src": "/(.*)",
+      "src": "^/(.*)$",
       "dest": "/www/$1",
       "headers": {
         "x-request-path": "$1"
