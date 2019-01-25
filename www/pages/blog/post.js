@@ -25,8 +25,8 @@ const getPost = async (slug, req) => {
 Post.getInitialProps = async ({ req, query }) => {
   try {
     const { slug } = req && req.params ? req.params : query
-    const { body } = await getPost(slug, req)
-    return { content: body }
+    const { body, title } = await getPost(slug, req)
+    return { content: body, title }
   } catch (e) {
     console.error('e', e)
     return {}
