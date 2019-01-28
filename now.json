@@ -11,7 +11,7 @@
     },
     {
       "src": "^/blog/$",
-      "dest": "/www/blog/index.js"
+      "dest": "/www/blog/index"
     },
     {
       "src": "^/blog/(.+)$",
