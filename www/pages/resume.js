@@ -33,7 +33,7 @@ const resume = () => {
 - Web performance optimization
 
 ## GitHub Profile
-https://github.com/JuanCaicedo
+- https://github.com/JuanCaicedo
 
 ## Qualifications
 ### Education
@@ -91,9 +91,8 @@ https://github.com/JuanCaicedo
 
 ### SpanishDict.com
 #### Language learning guide
-https://www.spanishdict.com/guide
-https://www.spanishdict.com/guide/superlative-adjectives-in-spanish
-
+- [https://www.spanishdict.com/guide](https://www.spanishdict.com/guide)
+- [https://www.spanishdict.com/guide/superlative-adjectives-in-spanish](https://www.spanishdict.com/guide/superlative-adjectives-in-spanish)
 - Implemented custom markdown syntax to enable content team to easily author
   new articles
 - Developed styling for components so they could be used anywhere in an
@@ -101,8 +100,8 @@ https://www.spanishdict.com/guide/superlative-adjectives-in-spanish
 - Added backend method for retrieving articles by topic
 
 #### Spelling suggestions
-http://www.spanishdict.com/translate/serr
 
+- [http://www.spanishdict.com/translate/serr](http://www.spanishdict.com/translate/serr)
 - Created scripts to pull all search query data (10 million queries) from
   Mixpanel API
 - Enabled data cleaning and normalization by implementing a Node.js command line
@@ -113,8 +112,8 @@ http://www.spanishdict.com/translate/serr
   they arrived at an entry
 
 #### Quizzes
-https://www.spanishdict.com/quizzes/41/ser-vs-estar
 
+- [https://www.spanishdict.com/quizzes/41/ser-vs-estar](https://www.spanishdict.com/quizzes/41/ser-vs-estar)
 - Integrated new React architecture and webpack build into existing server
   rendered pipeline
 - Created and styled quiz UI components and interaction logic
@@ -123,19 +122,50 @@ https://www.spanishdict.com/quizzes/41/ser-vs-estar
 
 ### Digital nomadism
 
-Since the summer of 2016, I've been some version of a "digital nomad". I've been
-a full-time remote worker, allowing me to live in my birth country while also
-delivering high quality work.
+- Since the summer of 2016, I've been some version of a "digital nomad". I've been
+  a full-time remote worker, allowing me to live in my birth country while also
+  delivering high quality work.
 
-During this time I also took extended time off work to travel, while expanding
-my skills with cutting edge web technologies through many side projects.
+- During this time I also took extended time off work to travel, while expanding
+  my skills with cutting edge web technologies through many side projects.
 `
 }
 
 const Resume = () => (
   <Layout title="Resume" size="mw7-ns">
+    <style jsx>{`
+      div :global(h1) {
+        margin-bottom 16px;
+        font-size: 48px;
+      }
+
+      div :global(ul) {
+        margin-bottom 16px;
+      }
+
+      div :global(h2) {
+        margin-bottom 16px;
+        font-size: 32px;
+      }
+
+      div :global(h3) {
+        margin-bottom 16px;
+        font-size: 24px;
+      }
+
+      div :global(h4) {
+        margin-bottom 8px;
+      }
+
+      div :global(table) {
+        margin-bottom 16px;
+      }
+
+    `}</style>
     <Card>
-      <ReactMarkdown source={resume()} />
+      <div className="mx-auto max-w-md">
+        <ReactMarkdown source={resume()} />
+      </div>
     </Card>
   </Layout>
 )
