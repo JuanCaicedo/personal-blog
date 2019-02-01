@@ -59,6 +59,20 @@ https://github.com/JuanCaicedo
   Java Web Developer
   (September 2013 - February 2015)
 
+## Conference Talks
+- Test Driven CSS
+  - Revolution Conf, June 2017
+  - Stir Trek, May 2017
+  - Forward Courses [(online workshop)]( https://forwardcourses.com/workshops/119 )
+- Better JSON through streams
+  - [Fullstack London 2016]( https://skillsmatter.com/skillscasts/8160-better-json-through-streams )
+  - [NationJS NodeDay 2016]( https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948440 )
+  - KCDC 2016
+- Elm => Javascript
+  - [JSConf Uruguay 2016]( https://www.youtube.com/watch?v=UmxPZpam7o0 )
+- Building Command Line Applications the Node Way
+  - JSConf Colombia 2016 (workshop)
+
 ## Projects
 ### Circle CI
 #### Consulting Achievements
@@ -117,29 +131,11 @@ During this time I also took extended time off work to travel, while expanding
 my skills with cutting edge web technologies through many side projects.
 `
 }
-const talks = () => {
-  return `
-## Conference Talks
-- Test Driven CSS
-  - Revolution Conf, June 2017
-  - Stir Trek, May 2017
-  - Forward Courses [(online workshop)]( https://forwardcourses.com/workshops/119 )
-- Better JSON through streams
-  - [Fullstack London 2016]( https://skillsmatter.com/skillscasts/8160-better-json-through-streams )
-  - [NationJS NodeDay 2016]( https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948440 )
-  - KCDC 2016
-- Elm => Javascript
-  - [JSConf Uruguay 2016]( https://www.youtube.com/watch?v=UmxPZpam7o0 )
-- Building Command Line Applications the Node Way
-  - JSConf Colombia 2016 (workshop)
-`
-}
 
 const Resume = () => (
   <Layout title="Resume" size="mw7-ns">
     <Card>
       <ReactMarkdown source={resume()} />
-      <ReactMarkdown source={talks()} />
     </Card>
   </Layout>
 )
