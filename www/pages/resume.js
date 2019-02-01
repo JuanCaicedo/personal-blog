@@ -13,24 +13,23 @@ const resume = () => {
 ## Technical Skills
 | Skill                | Time                            |
 |----------------------|---------------------------------|
-| Software Engineering | 5 years professional experience |
-| Node.js              | 3 years                         |
-| Javascript           | 3 years                         |
-| AWS                  | 3 years                         |
-| CSS                  | 2 years                         |
-| React                | 1 year                          |
+| Software Engineering | 6 years professional experience |
+| Node.js              | 4 years                         |
+| Javascript           | 4 years                         |
+| AWS                  | 4 years                         |
+| CSS                  | 3 years                         |
+| React                | 2 year                          |
 | Elm                  | 1 year                          |
 
 ## Experience with
-- Remote work (2 years)
+- Remote work (4 years)
 - Rich client-side applications
 - Micro-service architecture
-- REST web services
-- Unit Testing
-- Test Driven Development
+- Continuous Integration & Delivery
+- REST web services & GraphQL
+- Unit Testing & Test Driven Development
 - SQL, NoSql, Elasticsearch, Redis
-- Dev Ops
-- Docker
+- Dev Ops & Docker
 - Web performance optimization
 
 ## GitHub Profile
