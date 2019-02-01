@@ -60,6 +60,21 @@ https://github.com/JuanCaicedo
   (September 2013 - February 2015)
 
 ## Projects
+### Circle CI
+#### Consulting Achievements
+- Coached engineers and product team to communicate in mutually understandable
+  terms, leading to better business-value delivery
+- Established culture of high-quality software engineering by promoting testing,
+  accountability, knowledge sharing, and safe communication
+#### Product Achievements
+- Launched Orbs registry app, a rich client-side explorer of reusable CI
+  configurations, backed by graphql
+- Amplified marketing efforts by delivering many high quality pages:
+  * [circleci.com/open-source](https://circleci.com/open-source/),
+  * [circleci.com/security](https://circleci.com/security/)
+- Increased customer conversion rates through revamping subscription UI, while
+  beefing up related legacy code
+
 ### SpanishDict.com
 #### Language learning guide
 https://www.spanishdict.com/guide
