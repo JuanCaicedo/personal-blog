@@ -1,6 +1,5 @@
 import Layout from '../layout/Main'
 import Card from '../components/Card'
-import AboutMe from '../content/about-me.mdx'
 import ReactMarkdown from 'react-markdown'
 
 const blog = () => {

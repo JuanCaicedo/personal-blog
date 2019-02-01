@@ -1,8 +1,42 @@
 import Layout from '../layout/Main'
 import Card from '../components/Card'
-import AboutMe from '../content/about-me.mdx'
-import Blog from '../content/blog.mdx'
 import ReactMarkdown from 'react-markdown'
+
+const aboutMe = () => {
+  return `
+## About me
+
+My name is Juan Caicedo, I'm a Colombian/Canadian/American full stack JS developer.
+
+I was born in Montreal to Colombian parents and spent most of my life between
+Bogotá and Portland, Oregon. This made me fascinated with how languages work and
+how we used them, leading me to pursue a Bachelor of Arts in Linguistics at the
+University of British Columbia. That interest lead me to Natural Language
+Processing and eventually web development.
+
+After working as a contractor for various government programs in Java, I became
+interested in the young Node.js scene and started working for CuriosityMedia on
+[SpanishDict.com](http://www.spanishdict.com/) first in the city and afterwards
+remotely.
+
+Because I entered programming through a "non-traditional path", I'm really
+interested in helping others get started in the industry. When living in
+Washington DC I helped establish [NodeSchool
+DC](https://nodeschool.io/washingtondc/) and was an organizer for
+[NodeDC](https://www.meetup.com/node-dc/). I also give talks an workshops all
+over the world to help others learn various javascript topics.
+`
+}
+
+const blog = () => {
+  return `
+## Blog
+
+I've written various blog posts (on here and at
+[Medium](https://medium.com/@_juancaicedo)) about my interests in javascript,
+emacs, and programming.
+`
+}
 
 const talks = () => {
   return `
@@ -31,10 +65,10 @@ const Page = () => (
     `}</style>
     <img src="/static/juan.jpg" className="center db mb4 overflow-hidden br2" />
     <Card>
-      <AboutMe />
+      <ReactMarkdown source={aboutMe()} />,
     </Card>
     <Card>
-      <Blog />
+      <ReactMarkdown source={blog()} />
     </Card>
     <Card>
       <ReactMarkdown source={talks()} />
