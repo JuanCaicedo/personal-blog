@@ -107,8 +107,14 @@ https://www.spanishdict.com/quizzes/41/ser-vs-estar
 - Established single state store using Redux to share state between components
 - Added game-like animations to make user experience engaging.
 
+### Digital nomadism
 
+Since the summer of 2016, I've been some version of a "digital nomad". I've been
+a full-time remote worker, allowing me to live in my birth country while also
+delivering high quality work.
 
+During this time I also took extended time off work to travel, while expanding
+my skills with cutting edge web technologies through many side projects.
 `
 }
 const talks = () => {
