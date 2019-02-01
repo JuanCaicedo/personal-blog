@@ -107,21 +107,7 @@ https://www.spanishdict.com/quizzes/41/ser-vs-estar
 - Established single state store using Redux to share state between components
 - Added game-like animations to make user experience engaging.
 
-### Gh-notifications
-https://gh-notifications.now.sh/
 
-- Integrated Auth0 authentication API for GitHub OAuth access.
-- Leveraged GitHub API to pull in user's notifications.
-- Persisted notifications to firebase for real time data synchronization.
-- Built front-end client application with Elm.
-
-### Store Science
-
-An analytics platform connecting Shopify and AliExpress data, allowing owners
-of dropshipping businesses to quickly visualize their profitability by product.
-
-- Integrated Shopify OAuth flow to gain access to user's sales data.
-- Levaraged Next.js to enable universal rendering.
 
 `
 }
