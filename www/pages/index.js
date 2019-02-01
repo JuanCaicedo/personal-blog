@@ -1,8 +1,17 @@
 import Layout from '../layout/Main'
 import Card from '../components/Card'
 import AboutMe from '../content/about-me.mdx'
-import Blog from '../content/blog.mdx'
 import ReactMarkdown from 'react-markdown'
+
+const blog = () => {
+  return `
+## Blog
+
+I've written various blog posts (on here and at
+[Medium](https://medium.com/@_juancaicedo)) about my interests in javascript,
+emacs, and programming.
+`
+}
 
 const talks = () => {
   return `
@@ -26,7 +35,7 @@ const Cards = [
   <div>
     Hi! I'm Juan Caicedo, a Colombian/Canadian/American full-stack JS developer.
   </div>,
-  <Blog />,
+  <ReactMarkdown source={blog()} />,
   <ReactMarkdown source={talks()} />
 ]
 
