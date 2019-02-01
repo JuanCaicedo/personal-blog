@@ -81,31 +81,31 @@ https://www.spanishdict.com/guide
 https://www.spanishdict.com/guide/superlative-adjectives-in-spanish
 
 - Implemented custom markdown syntax to enable content team to easily author
-  new articles.
+  new articles
 - Developed styling for components so they could be used anywhere in an
-  article, including nested within each other.
-- Added backend method for retrieving articles by topic.
+  article, including nested within each other
+- Added backend method for retrieving articles by topic
 
 #### Spelling suggestions
 http://www.spanishdict.com/translate/serr
 
 - Created scripts to pull all search query data (10 million queries) from
-  Mixpanel API.
+  Mixpanel API
 - Enabled data cleaning and normalization by implementing a Node.js command line
   tool to handle query data as a stream
 - Constructed micro-service to retrieve spelling suggestions from Elasticsearch
 - Implemented backend logic to route users to top selling suggestion
 - Integrated spelling suggestions into UI to give users more insight into how
-  they arrived at an entry.
+  they arrived at an entry
 
 #### Quizzes
 https://www.spanishdict.com/quizzes/41/ser-vs-estar
 
 - Integrated new React architecture and webpack build into existing server
-  rendered pipeline.
-- Created and styled quiz UI components and interaction logic.
+  rendered pipeline
+- Created and styled quiz UI components and interaction logic
 - Established single state store using Redux to share state between components
-- Added game-like animations to make user experience engaging.
+- Added game-like animations to make user experience engaging
 
 ### Digital nomadism
 
