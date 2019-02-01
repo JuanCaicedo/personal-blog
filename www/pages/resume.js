@@ -47,6 +47,10 @@ https://github.com/JuanCaicedo
 - BrainBench Java 6 fundamentals
 
 ## Employers
+- Test Double LLC
+  Software Consultant
+  (April 2018 - Present)
+
 - Curiosity Media, Inc
   Full Stack Software Engineer
   (February 2015 - October 2017)
