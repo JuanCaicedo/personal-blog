@@ -13,7 +13,7 @@ const resume = () => {
 ## Technical Skills
 | Skill                | Time                            |
 |----------------------|---------------------------------|
-| Software Engineering | 6 years professional experience |
+| Software Engineering | 6 years                         |
 | Node.js              | 4 years                         |
 | Javascript           | 4 years                         |
 | AWS                  | 4 years                         |
@@ -161,9 +161,13 @@ const Resume = () => (
         margin-bottom 16px;
       }
 
+      div :global(td) {
+        max-width: 100px;
+      }
+
     `}</style>
     <Card>
-      <div className="mx-auto max-w-md">
+      <div>
         <ReactMarkdown source={resume()} />
       </div>
     </Card>
