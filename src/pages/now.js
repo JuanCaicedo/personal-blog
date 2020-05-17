@@ -55,11 +55,11 @@ const Page = () => (
     />
     <Card className="text-xl w-full">
       You might also be interested in more{' '}
-      <Link href="/about" className="text-xl">
+      <Link to="/about" className="text-xl">
         about me
       </Link>
       , or maybe my{' '}
-      <Link href="/resume" className="text-xl">
+      <Link to="/resume" className="text-xl">
         resume
       </Link>
       .

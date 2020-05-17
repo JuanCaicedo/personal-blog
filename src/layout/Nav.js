@@ -1,11 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const NavLink = ({ href, children, className = '' }) => (
-  <Link href={href} className={`mr-3 ${className}`}>
-    {children}
-  </Link>
-)
+const NavLink = ({ to, external, children, className = '' }) => {
+  return external ? (
+    <a href={to} className={`mr-3 ${className}`}>
+      {children}
+    </a>
+  ) : (
+    <Link to={to} className={`mr-3 ${className}`}>
+      {children}
+    </Link>
+  )
+}
 
 const Nav = () => (
   <header className="bg-red fixed w-full z-10">
@@ -15,12 +21,13 @@ const Nav = () => (
       }
     `}</style>
     <nav className="py-3 flex mx-auto max-w-lg px-8 md:px-0">
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/now">Now</NavLink>
-      <NavLink href="/blog">Blog</NavLink>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/now">Now</NavLink>
+      <NavLink to="/blog">Blog</NavLink>
       <NavLink
-        href="https://github.com/juancaicedo/personal-blog"
+        to="https://github.com/juancaicedo/personal-blog"
         className="ml-auto"
+        external
       >
         Fork on GitHub
       </NavLink>
