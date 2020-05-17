@@ -11,11 +11,11 @@ const ActivityList = ({ activities, title }) => {
   return (
     <Card className="w-full">
       <div>
-        <h2 className="text-2xl mb-4">{title}</h2>
+        <h4 className="mb-4">{title}</h4>
         <ul>
           {R.map(
-            (activity) => (
-              <ActivityItem text={activity} />
+            (activity, i) => (
+              <ActivityItem key={i} text={activity} />
             ),
             activities
           )}
@@ -31,28 +31,13 @@ const Page = () => (
     <ActivityList
       title="My life at a glance"
       activities={[
-        'Living in Medellin',
-        'Working for Test Double (at Circle CI)',
-        'Playing guitar',
+        'Living in Portland',
+        'Working for Test Double (at Physna)',
+        'Playing ukelele',
+        'Drawing a pineapple everyday',
       ]}
     />
-    <ActivityList
-      title="Goals"
-      activities={[
-        'Speak at JSConf EU',
-        'Compose a rock opera',
-        'Write all content in Spanish and English',
-        'Attend the Recurse Center',
-      ]}
-    />
-    <ActivityList
-      title="Recently Read"
-      activities={[
-        'Sometimes a Great Notion',
-        'Oblivion. A Memoir',
-        'Motorcycle Diaries',
-      ]}
-    />
+    <ActivityList title="Goals" activities={['Hike the Pacific Crest Trail']} />
     <Card className="text-xl w-full">
       You might also be interested in more{' '}
       <Link to="/about" className="text-xl">

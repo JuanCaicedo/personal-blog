@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = ({ children, header, className = '' }) => (
-  <div className={`bg-yellow p-3 mb-4 rounded-lg card ${className}`}>
+  <div className={`bg-yellow-400 p-3 mb-4 rounded-lg card ${className}`}>
     <style jsx>{`
       .card :global(div:first-child > :first-child) {
         margin-top: 0;

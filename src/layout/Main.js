@@ -6,7 +6,7 @@ import './blog.css'
 import './global.css'
 
 export default ({ children, title = 'This is the default title' }) => (
-  <div className="font-sans">
+  <div className="font-sans layout h-full">
     <Helmet>
       <title>{title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

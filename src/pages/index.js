@@ -42,9 +42,16 @@ const Cards = [
 const Page = ({ json, list }) => {
   return (
     <Layout title="Juan Caicedo">
+      <style jsx>
+        {`
+          h4 {
+            text-align: center;
+          }
+        `}
+      </style>
       <img
-        src="/static/juan.jpg"
-        className="center db mb4 overflow-hidden br2 block m-auto mb-6 w-32 rounded-lg"
+        src="/juan.jpg"
+        className="center db mb4 overflow-hidden br2 block m-auto mb-6 max-w-lg rounded-lg"
         alt="Juan, an amiable fellow"
       />
 

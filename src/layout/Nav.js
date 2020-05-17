@@ -14,7 +14,7 @@ const NavLink = ({ to, external, children, className = '' }) => {
 }
 
 const Nav = () => (
-  <header className="bg-red fixed w-full z-10">
+  <header className="bg-red-600 fixed w-full z-10">
     <style jsx>{`
       nav :global(a) {
         color: #f4f4f4;

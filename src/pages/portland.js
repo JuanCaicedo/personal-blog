@@ -4,24 +4,13 @@ import Card from '../components/Card'
 
 const Page = () => (
   <Layout title="Portland recommendations">
-    <style jsx>{`
-      :global(.card) {
-        text-align: center;
-      }
-      h1 {
-        margin: 0 0 16px;
-      }
-      h2 {
-        margin: 0 0 14px;
-      }
-    `}</style>
-    <Card className="card">
+    <Card className="card w-full">
       <h1>Portland</h1>
       <div>
-        <div>Here's what I reccomend you should do if you are in Portland!</div>
+        <div>Here's what I recommend you should do if you are in Portland!</div>
       </div>
     </Card>
-    <Card className="card">
+    <Card className="card w-full">
       <h2>Cider tasting</h2>
       <ul>
         <li>
@@ -32,7 +21,7 @@ const Page = () => (
         </li>
       </ul>
     </Card>
-    <Card>
+    <Card className="w-full">
       <h2>Hiking</h2>
       <ul>
         <li>
@@ -40,16 +29,18 @@ const Page = () => (
             Forest Park{' '}
           </a>
         </li>
-        <li>>Eagle Creek</li>
+        <li>Eagle Creek</li>
       </ul>
     </Card>
-    <Card>
+    <Card className="w-full">
       <h2>Food carts</h2>
-      <div>
-        <a href="http://www.foodcartsportland.com/maps/">Food cart map</a>
-      </div>
+      <ul>
+        <li>
+          <a href="http://www.foodcartsportland.com/maps/">Food cart map</a>
+        </li>
+      </ul>
     </Card>
-    <Card>
+    <Card className="w-full">
       <h2>Parks and gardens</h2>
       <ul>
         <li>
