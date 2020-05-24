@@ -1,0 +1,51 @@
+---
+title: "How to copy the last command run in bash"
+slug: "copy-last-command"
+date: "April 4, 2018"
+---
+# How to copy last command in bash
+
+Often I find myself trying out a command in the shell in a few different ways.
+Then when I finally get it right, I want to copy what I ran, sometimes to share
+it with someone or often just to jot it down in my notes.
+
+Sometimes that's not as easy as I would want. That might be because the command
+printed a lot of things to the screen, so the command is far away or even lost.
+Other times it's just because it's just because I don't want to use the mouse.
+
+## One command
+
+I wrote a little bash function to copy the last command to the clipboard. Note
+that this is only tested on OSX, so it might not work on other operating
+systems, particularly if the don't have `pbcopy` built in.
+
+```bash
+function copy-last {
+    history | tail -n 1 | awk '{$1=""; print $0}' | pbcopy
+}
+```
+
+## How it works
+
+This command has four parts, the output of each is piped into the next as input:
+
+`history` list all commands in the history.
+
+`tail -n 1` returns the last line of the input it receives.
+
+`awk '{$1=""; print $0}'` is the tricky part of this function. The output of `history` returns
+is many lines of two columns each. The first is an id, and the second is a
+command. Here `awk` ignores the first column and prints whatever is left over.
+At least that is my understanding, the original article is
+[here](http://onetipperday.sterding.com/2012/02/print-all-columns-except-last-one.html).
+
+`pbcopy` takes whatever was passed as its input and copies it to the system
+clipboard.
+
+## Alternative
+
+Bash has a few other shorthands that I know of to get the last command. The ones
+I know are `!?`, `!!`, and `!-1`. I suspect that if you somehow put those inside
+of an echo command, you could then pipe the result into `pbcopy`. I wasn't able
+to get something like that working though, and this does the trick 😅 Feel free
+to let me know if you find a solution though!
