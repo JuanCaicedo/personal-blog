@@ -33,10 +33,3 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 }
-
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `Mdx`) {
-//     console.log('node', node)
-//   }
-// }

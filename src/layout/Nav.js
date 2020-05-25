@@ -20,7 +20,7 @@ const Nav = () => (
         color: #f4f4f4;
       }
     `}</style>
-    <nav className="py-3 flex mx-auto max-w-lg px-8 md:px-0">
+    <nav className="py-3 flex mx-auto max-w-3xl px-8 md:px-0">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/now">Now</NavLink>
       <NavLink to="/blog">Blog</NavLink>
