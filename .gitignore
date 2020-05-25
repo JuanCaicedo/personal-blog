@@ -3,3 +3,5 @@ fixtures
 config/production.js
 .next
 public/
+
+.vercel
