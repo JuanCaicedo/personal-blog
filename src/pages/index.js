@@ -78,13 +78,6 @@ const Talks = () => {
 const Page = () => {
   return (
     <Layout title="Juan Caicedo">
-      <style jsx>
-        {`
-          h4 {
-            text-align: center;
-          }
-        `}
-      </style>
       <div className="overflow-hidden br2 mb-6 max-w-lg rounded-lg">
         <img src={JuanImg} alt="Juan, that's me, who this site is about!" />
       </div>
