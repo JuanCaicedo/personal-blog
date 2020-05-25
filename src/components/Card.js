@@ -9,9 +9,6 @@ const Card = ({ children, header, className = '' }) => (
       .card :global(div:last-child > :last-child) {
         margin-bottom: 0;
       }
-      img {
-        width: 250px;
-      }
     `}</style>
     {children}
   </div>
