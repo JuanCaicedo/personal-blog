@@ -24,6 +24,7 @@ const Nav = () => (
       <NavLink to="/">Home</NavLink>
       <NavLink to="/now">Now</NavLink>
       <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/garden">Garden</NavLink>
       <NavLink
         to="https://github.com/juancaicedo/personal-blog"
         className="ml-auto"
