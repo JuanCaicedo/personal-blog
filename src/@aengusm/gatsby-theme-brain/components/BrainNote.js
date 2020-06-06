@@ -34,6 +34,7 @@ export default function BrainNote({ note }, pageContext) {
   return (
     <Layout title={note.title}>
       <Card className="juan-blog">
+        <h1>{note.title}</h1>
         <MDXRenderer>{note.childMdx.body}</MDXRenderer>
         <References note={note} />
       </Card>
