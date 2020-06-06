@@ -75,8 +75,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
     {
       resolve: '@aengusm/gatsby-theme-brain',
-      mdxOtherwiseConfigured: true,
-      // notesDirectory: 'garden/',
+      options: {
+        mdxOtherwiseConfigured: true,
+        notesDirectory: 'garden/',
+        rootPath: '/garden',
+        hideDoubleBrackets: true,
+      },
     },
   ],
 }
