@@ -25,7 +25,7 @@ function References({ note }) {
 
   return (
     <>
-      <h3>Linked References</h3>
+      <H3>Where have I mentioned this?</H3>
       <ul>{references}</ul>
     </>
   )
@@ -40,7 +40,7 @@ function H1({ children }) {
 }
 
 function H2({ children }) {
-  return <h2 className="text-4xl my-3 text-center">{children}</h2>
+  return <h2 className="text-4xl my-3">{children}</h2>
 }
 
 function H3({ children }) {
