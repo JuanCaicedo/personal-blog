@@ -3,25 +3,22 @@ import * as R from 'ramda'
 import Link from 'gatsby-link'
 
 import Layout from '../layout/Main'
-import Card from '../components/Card'
 
 const ActivityItem = ({ text }) => <li className="text-xl">{`${text}`}</li>
 
 const ActivityList = ({ activities, title }) => {
   return (
-    <Card className="w-full">
-      <div>
-        <h4 className="mb-4">{title}</h4>
-        <ul>
-          {R.map(
-            (activity, i) => (
-              <ActivityItem key={i} text={activity} />
-            ),
-            activities
-          )}
-        </ul>
-      </div>
-    </Card>
+    <div>
+      <h4 className="mb-4">{title}</h4>
+      <ul>
+        {R.map(
+          (activity, i) => (
+            <ActivityItem key={i} text={activity} />
+          ),
+          activities
+        )}
+      </ul>
+    </div>
   )
 }
 
@@ -38,7 +35,7 @@ const Page = () => (
       ]}
     />
     <ActivityList title="Goals" activities={['Hike the Pacific Crest Trail']} />
-    <Card className="text-xl w-full">
+    <div className="text-xl w-full">
       You might also be interested in more{' '}
       <Link to="/about" className="text-xl">
         about me
@@ -48,7 +45,7 @@ const Page = () => (
         resume
       </Link>
       .
-    </Card>
+    </div>
   </Layout>
 )
 

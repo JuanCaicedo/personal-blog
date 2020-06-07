@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 a {
-  @apply text-red-600;
+  color: #3182CE;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.4s ease 0s;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #C65B7D;
 }
 
 ul {
@@ -41,5 +43,6 @@ h6 {
 }
 
 html, body {
-  @apply h-full bg-blue-600;
+  @apply h-full bg-white;
+  color: #515151;
 }

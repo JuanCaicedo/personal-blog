@@ -15,9 +15,7 @@ export default ({ children, title = 'This is the default title' }) => (
     <Nav />
 
     <main className="p-4">
-      <div className="mt-12 max-w-3xl mx-auto flex flex-col items-center">
-        {children}
-      </div>
+      <div className="mt-12 max-w-3xl mx-auto flex flex-col">{children}</div>
     </main>
   </div>
 )
