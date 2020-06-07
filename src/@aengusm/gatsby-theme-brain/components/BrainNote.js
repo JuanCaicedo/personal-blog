@@ -32,12 +32,17 @@ function References({ note }) {
 }
 
 function Paragraph({ children }) {
-  return <div className="mt-4 first:mt-0">{children}</div>
+  return <p className="my-4 first:mt-0">{children}</p>
 }
 
 function H1({ children }) {
   return <h1 className="text-5xl mb-4 text-center">{children}</h1>
 }
+
+function H2({ children }) {
+  return <h2 className="text-4xl my-3 text-center">{children}</h2>
+}
+
 function H3({ children }) {
   return <h3 className="text-3xl my-2">{children}</h3>
 }
@@ -46,7 +51,9 @@ export default function BrainNote({ note }, pageContext) {
   return (
     <Layout title={note.title}>
       <H1>{note.title}</H1>
-      <MDXProvider components={{ code: Code, p: Paragraph, h3: H3 }}>
+      <MDXProvider
+        components={{ code: Code, p: Paragraph, h1: H1, h2: H2, h3: H3 }}
+      >
         <MDXRenderer>{note.childMdx.body}</MDXRenderer>
       </MDXProvider>
       <References note={note} />
