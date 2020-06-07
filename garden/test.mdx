@@ -1,0 +1,20 @@
+---
+title: test
+---
+
+Just trying to see if code will be highlighted
+
+```jsx
+export default function BrainNote({ note }, pageContext) {
+  return (
+    <Layout title={note.title}>
+      <h1>{note.title}</h1>
+      <MDXProvider components={{ code: Code }}>
+        <MDXRenderer>{note.childMdx.body}</MDXRenderer>
+      </MDXProvider>
+      <References note={note} />
+    </Layout>
+  )
+}
+
+```
