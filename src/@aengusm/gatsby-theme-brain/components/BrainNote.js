@@ -2,7 +2,6 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import Layout from '../../../layout/Main'
-import Card from '../../../components/Card'
 import Code from '../../../components/Code'
 
 function References({ note }) {
