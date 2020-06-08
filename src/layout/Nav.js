@@ -14,24 +14,14 @@ const NavLink = ({ to, external, children, className = '' }) => {
 }
 
 const Nav = () => (
-  <header className="bg-red-600 fixed w-full z-10">
-    <style jsx>{`
-      nav :global(a) {
-        color: #f4f4f4;
-      }
-    `}</style>
+  <header className="w-full">
     <nav className="py-3 flex mx-auto max-w-3xl px-8 md:px-0">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/now">Now</NavLink>
+      <NavLink to="/" className="flex-1">
+        Hola!
+      </NavLink>
+      <NavLink to="/garden/now">Now</NavLink>
       <NavLink to="/blog">Blog</NavLink>
       <NavLink to="/garden">Garden</NavLink>
-      <NavLink
-        to="https://github.com/juancaicedo/personal-blog"
-        className="ml-auto"
-        external
-      >
-        Fork on GitHub
-      </NavLink>
     </nav>
   </header>
 )
