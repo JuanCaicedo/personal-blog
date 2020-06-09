@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../layout/Main'
-import Card from '../components/Card'
 import JuanImg from '../images/juan.jpg'
 
 const Blog = () => {

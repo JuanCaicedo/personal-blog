@@ -8,11 +8,7 @@ const NavLink = ({ to, external, children, className = '' }) => {
     <Link to={to}>{children}</Link>
   )
 
-  return (
-    <div className={`mr-3`} className={`mr-3 ${className}`}>
-      {link}
-    </div>
-  )
+  return <div className={`mr-3 ${className}`}>{link}</div>
 }
 
 const Nav = () => (
