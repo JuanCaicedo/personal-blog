@@ -2,14 +2,16 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const NavLink = ({ to, external, children, className = '' }) => {
-  return external ? (
-    <a href={to} className={`mr-3 ${className}`}>
-      {children}
-    </a>
+  const link = external ? (
+    <a href={to}>{children}</a>
   ) : (
-    <Link to={to} className={`mr-3 ${className}`}>
-      {children}
-    </Link>
+    <Link to={to}>{children}</Link>
+  )
+
+  return (
+    <div className={`mr-3`} className={`mr-3 ${className}`}>
+      {link}
+    </div>
   )
 }
 
