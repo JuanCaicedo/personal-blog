@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../layout/Main'
-import Card from '../components/Card'
 import JuanImg from '../images/juan.jpg'
 
 const Blog = () => {
@@ -78,24 +77,17 @@ const Talks = () => {
 const Page = () => {
   return (
     <Layout title="Juan Caicedo">
-      <div className="overflow-hidden br2 mb-6 max-w-lg rounded-lg">
+      <h1 className="text-6xl">Juan Caicedo</h1>
+      <div>
+        That's me! I'm a Colombian, Canadian, American Full Stack Javascript
+        developer.
+      </div>
+      <div className="overflow-hidden br2 mb-6 max-w-lg rounded-lg mx-auto">
         <img src={JuanImg} alt="Juan, that's me, who this site is about!" />
       </div>
 
-      <div>
-        <Card>
-          <div>
-            Hi! I'm Juan Caicedo, a Colombian/Canadian/American full-stack JS
-            developer.
-          </div>
-        </Card>
-        <Card>
-          <Blog />
-        </Card>
-        <Card>
-          <Talks />
-        </Card>
-      </div>
+      <Blog />
+      <Talks />
     </Layout>
   )
 }
