@@ -1,0 +1,33 @@
+---
+title: Empathizing with your users
+---
+
+- Comes from the idea that the best way to build fast and reliable websites for
+  slower machines and networks is to purposely have developers use old machines
+  for their job
+  - I'll admit this is something that I like in theory, but have never tried
+- The core of this idea is that when developers test on the best hardware, we
+  suffer of the best-case-scenario-bias
+  - I think of this as how we tend to solve the most salient problems we
+    experience as developers
+  - If we are always testing with the best hardware, we never see the problems
+    that might crop up on less good hardware
+- This is also similar to [[testing the happy path]], a problem in which we
+  test the situations in which our code works, but fail to consider the many
+  edge cases in which it might not work
+- Today I got bit by a bug of another sort, similar sort
+  - I was testing removing permissions from my current user to a shared
+    repository of data
+    - When I removed my permissions to the data, I should no longer be able to see
+      it
+    - I was stuck for a while because even after removing the permissions, I could
+      still access the data
+      - I tested this through the UI and the bug was present
+      - I wrote up a unit test to see this bug in action, which was very easy
+        using [[Behavior Driven Development]], and was surprised that my tests
+        behaved as expected, effectively revoking the permission
+      - What was different in the UI? It turns out that I tested everything as a
+        super user, and for ease of development, we've given super users access
+        to all data in our staging environment
+      - By not testing with the same permissions regular uses will have, I was
+        completely blind to the point that I was chasing a bug that did not exist
