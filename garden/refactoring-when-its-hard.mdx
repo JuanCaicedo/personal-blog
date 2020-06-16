@@ -1,0 +1,20 @@
+---
+title: Refactoring even though it's hard
+---
+
+- Deciding whether to refactor isn't always easy
+- Sometimes we push it off longer and longer, making it harder to do later
+- Today I spent a lot of time doing a refactoring of how we fetch data
+  - We originally wanted to write end to end tests and be able to mock the data
+    coming back from these fetches from inside our tests
+    - To do so we established a pattern that would make dependency injection
+      easy
+    - The downside is that it made our code a couple steps more complicated
+      every time that we needed to fetch data
+  - As time went on, it turned out that our client didn't want to invest much
+    into end-to-end tests, making our effort not worth it
+    - We fetched data a lot though so we felt the pain of the patterns we set up
+  - Doing this refactoring was slow and error prone, and it forced me to have
+    the codebase in a broken state for quite a long time
+    - I'll also now need to test all the different parts of my code to be sure
+      that it's all still working
