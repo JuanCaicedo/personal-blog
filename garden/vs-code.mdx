@@ -16,3 +16,17 @@ tooling.
 ## Tooling
 - I remember from when I used to be a Java developer that the best thing was
   getting autocomplete. That's something that I've missed as a JS developer
+
+## Vim
+- Need to support dvorak navigation
+  - Maybe the best way to do this `keybindings.json`?
+    - https://vscode.pro/tip/23/
+    - Can use the when clause to check if I'm in insert mode or not
+      https://github.com/VSCodeVim/Vim#-faq
+  - Wow, this is surprisingly complicated
+    - I want to bind a key to move left
+    - But there is no cursorLeft
+    - I have to make my own, but that involves writing an extension
+    - Might be able to call vscode-vim.vim_left in
+  - How do you try out an extension without needing to publish it?
+    - You have to edit it with VSCode and then run cmd+shift+e to debug it
