@@ -1,0 +1,75 @@
+---
+title: Plugin for creating a digital garden in Gasby
+---
+
+- This is the link that I use for my [[digital garden]]
+
+### Improvements
+#### Support emacs working files
+- I use [[spacemacs]] for tending my garden
+  - It creates an autosave file for anything you are currently editing, like
+    `garden/.#empathizing-with-your-users.mdx`
+  - This file is added and then removed
+- `gatsby-theme-brain` throws an error
+  ```
+  Error: ENOENT: no such file or directory, open 'garden/.#empathizing-with-your-users.mdx'
+
+  - get-markdown-notes.js:23
+    [personal-blog]/[@aengusm]/gatsby-theme-brain/src/get-markdown-notes.js:23:24
+
+  - Array.map
+
+  - get-markdown-notes.js:17 module.exports
+    [personal-blog]/[@aengusm]/gatsby-theme-brain/src/get-markdown-notes.js:17:6
+  ```
+- Other node tools don't seem to have this problem
+- My suspcion is that this file gets added to the build because it exists, but
+  then it is never full removed
+- If I try to run the build with an unsaved file (at least with the npm linked
+  setup), the error is also thrown
+  ```
+      if (!expr) {
+        const e = new Error("debugging");
+        console.error("e.stack", e.stack);
+      }
+  ```
+  - Doesn't seem to provide useful info, just the same thing that's showing up
+    in the logs
+
+##### Approach
+- Clone `gatsby-theme-brain` and link my local blog to it
+- Look into how the build works
+  - I've seen `chokidar` used a lot, is this part of what it does?
+  - What's the common way of watching files with node? Maybe nodemon, babel, or
+    webpack tool is a good example
+- After looking into this, the best approach might be to just allow the client
+  to exclude certain files. This would keep the lib from encoding much of the
+  internals of my environment
+
+##### Notes
+- I don't know much about how to write a [[Gatsby]] plugin, I probably would
+  want to look into that more
+- I'm having trouble setting up my dev environment, I'm seeing this error in the
+  logs when running linked version with `npm link @aengusm/gatsby-theme-brain`
+  ```
+  ERROR
+
+  UNHANDLED REJECTION expr is not a function
+
+
+
+    TypeError: expr is not a function
+
+    - source-nodes.js:57
+      /Users/juan/code/personal/gatsby-theme-brain/src/source-nodes.js:57:21
+    - interpreter.js:650 Interpreter.exec
+      [gatsby-theme-brain]/[xstate]/lib/interpreter.js:650:24
+  ```
+  - It seems like `expr` is coming through as undefined when it gets used. That's
+    confusing though, because it's in a file that's not in this repo
+  - Would it be possible to see who is calling the `log` that throws this error?
+  - I think that this was a bug introduced
+    [here](https://github.com/aengusmcmillin/gatsby-theme-brain/commit/ccc3b237fc299ae2718fada09901825a0efa51b6#diff-142987439dc1a1a523e05892a9e2d296R69).
+    I think that it could be addressed by setting a default behaviour for that log
+    instead of passing undefined
+- What is xstate? it seems to be wrapping the chokidar steps

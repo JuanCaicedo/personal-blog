@@ -81,6 +81,7 @@ module.exports = {
         rootPath: '/garden',
         rootNote: 'garden',
         hideDoubleBrackets: true,
+        exclude: [/^#\./, 'spacemacs.mdx', 'log.mdx'],
       },
     },
   ],
