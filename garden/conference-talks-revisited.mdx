@@ -1,0 +1,46 @@
+---
+title: Conference talks revisited
+---
+
+One of the most important things is being willing to admit when you're wrong.
+
+Over the years, I've given lots of conference talks and with them I've given
+lots of advice.
+
+Looking back, a lot of it has turned out to be bad advice.
+
+Here I wanted to take a second to look through some of these talks and mention
+how my thinking on them has changed.
+
+### Better JSON through streams
+
+In this talk, I looked at a library called Oboe.js for loading and parsing JSON.
+In it I recommended using this library so that you can access data from a big
+JSON object before all of it has been parsed and ready to use in memory.
+
+In hindsight, I don't think there are many scenarios where you would want to do
+this.
+
+On the browser side, Oboe replaces whatever other method you would use for
+fetching data and allows you to write a [[DSL]] to subscribe to events when certain
+nodes in that data are found.
+
+If you find yourself sending so much data over the network that it can't be
+easily parsed out by your client, it is probably a better solution to evaluate
+how you're sending that data. If the data isn't all available at once and you
+would like to make it available in an event-driven interface, you might be
+better served by reworking your server-side to expose a websocket.
+
+On the server side, the case is pretty similar. If you find yourself needing to
+represent data in a stream, there are many good tools for doing that and you
+probably don't want to add an extra DSL to do that.
+
+The concepts behind streaming data transfer are very good to understand and this
+talk served as away for me to learn about them. If I were to give this talk
+again, I would drop Oboe.js completely and instead focus on event architectures
+and how streaming is just an implementation of that.
+
+### Elm => Javascript
+### Test Driven CSS
+### Pattern Matching in Javascript
+### Enter the Src, VR on the web
