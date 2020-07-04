@@ -1,0 +1,18 @@
+---
+title: Improved mocking
+---
+
+This idea came from reading this [blog
+post](https://kentcdodds.com/blog/stop-mocking-fetch) from Kent Dodds.
+
+## Pain points
+- We have an application that accumulated a bad pattern because of how we were
+  trying to mock out our data for Cypress tests
+  - I mentioned this before in [refactoring when it's hard]
+    - Eventually we had to declare bankrupcy with this pattern and scrap our
+      Cypress tests all together
+  - Our Storybook tooling suffers from a similar problem
+    - This is because the components that we want to render have Apollo hooks
+      for loading data embedded in them, making them hard to stub out
+      - The solution for mocking these is not very nice, and often causes
+        headaches
