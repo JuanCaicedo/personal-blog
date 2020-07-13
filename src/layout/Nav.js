@@ -17,9 +17,7 @@ const Nav = () => (
       <NavLink to="/" className="flex-1">
         Hola!
       </NavLink>
-      <NavLink to="/garden/now">Now</NavLink>
-      <NavLink to="/blog">Blog</NavLink>
-      <NavLink to="/garden">Garden</NavLink>
+      <NavLink to="/now">Now</NavLink>
     </nav>
   </header>
 )
