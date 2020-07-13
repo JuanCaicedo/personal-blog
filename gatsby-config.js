@@ -78,10 +78,10 @@ module.exports = {
       options: {
         mdxOtherwiseConfigured: true,
         notesDirectory: 'garden/',
-        rootPath: '/garden',
+        rootPath: '/',
         rootNote: 'garden',
         hideDoubleBrackets: true,
-        exclude: [/^#\./, 'spacemacs.mdx', 'log.mdx'],
+        exclude: [/^#\./],
       },
     },
   ],
