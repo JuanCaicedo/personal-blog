@@ -2,6 +2,6 @@
   "version": 2,
   "alias": "juancaicedo.com",
   "routes": [
-    { "src": "/garden/(?<path>*)", "dest": "/$path" },
+    { "src": "/garden/(?<path>*)", "dest": "/$path" }
   ]
 }
