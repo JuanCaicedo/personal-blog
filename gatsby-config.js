@@ -81,7 +81,7 @@ module.exports = {
         rootPath: '/',
         rootNote: 'garden',
         hideDoubleBrackets: true,
-        exclude: [/^#\./],
+        exclude: [/#\./],
       },
     },
   ],
