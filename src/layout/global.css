@@ -18,6 +18,10 @@ ul {
   @apply list-disc pl-8;
 }
 
+ol {
+  @apply list-decimal pl-8;
+}
+
 h1 {
   @apply text-5xl;
 }
