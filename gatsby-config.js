@@ -79,7 +79,7 @@ module.exports = {
         mdxOtherwiseConfigured: true,
         notesDirectory: 'garden/',
         rootPath: '/',
-        rootNote: 'garden',
+        rootNote: 'home',
         hideDoubleBrackets: true,
         exclude: [/#\./],
       },
