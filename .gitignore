@@ -1,7 +1,17 @@
+# Local / misc
 local*
 fixtures
 config/production.js
+
+# OS / editor
+.DS_Store
+.dir-locals.el
+
+# Dependencies / caches
+node_modules/
+.cache/
+
+# Framework/build
 .next
 public/
-
 .vercel
