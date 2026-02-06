@@ -41,6 +41,10 @@
     "gatsby"
   ],
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
+  "packageManager": "npm@8.19.4",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
