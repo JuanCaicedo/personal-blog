@@ -1,0 +1,66 @@
+{
+  "domain": "juancaicedo.com",
+  "backupDate": "2026-02-22",
+  "records": [
+    {
+      "id": "rec_b409ec7472f70edc7d3b0197",
+      "name": "",
+      "type": "TXT",
+      "value": "google-site-verification=U0Ecu0_zlRD5mgt85ZzU7-N_8rxQWdYu7jKkOV6Dm48"
+    },
+    {
+      "id": "rec_815c37119da2537b2b779f9b",
+      "name": "",
+      "type": "MX",
+      "value": "10 work-mx.app.hey.com."
+    },
+    {
+      "id": "rec_8ff0c85aa263f0d36e095846",
+      "name": "heymail._domainkey",
+      "type": "CNAME",
+      "value": "heymail._domainkey.hey.com."
+    },
+    {
+      "id": "rec_ab5e8d7187a5e23c72ccfc5f",
+      "name": "_dmarc",
+      "type": "TXT",
+      "value": "v=DMARC1; p=none;"
+    },
+    {
+      "id": "rec_3fa8cd31fb2f6947aed595d3",
+      "name": "",
+      "type": "TXT",
+      "value": "v=spf1 include:_spf.hey.com ~all"
+    },
+    {
+      "id": "rec_24d794fa0076d8e27da95823",
+      "name": "",
+      "type": "TXT",
+      "value": "hey-verification:ttW6aAEdmJLEBW6R4EPRzLjJ"
+    },
+    {
+      "id": "rec_662277007f38d726392d671a",
+      "name": "",
+      "type": "CAA",
+      "value": "0 issue \"letsencrypt.org\""
+    },
+    {
+      "name": "",
+      "type": "CAA",
+      "value": "0 issue \"letsencrypt.org\"",
+      "note": "default record (no explicit id)"
+    },
+    {
+      "name": "*",
+      "type": "ALIAS",
+      "value": "cname.vercel-dns-017.com.",
+      "note": "default wildcard record"
+    },
+    {
+      "name": "",
+      "type": "ALIAS",
+      "value": "c2b6ff8e6d0c0192.vercel-dns-017.com",
+      "note": "default root record"
+    }
+  ]
+}
