@@ -1,7 +1,7 @@
 local*
 fixtures
 config/production.js
+node_modules
 .next
-public/
 
 .vercel

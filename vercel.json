@@ -1,7 +1,4 @@
 {
   "version": 2,
-  "alias": "juancaicedo.com",
-  "rewrites": [
-    { "source": "/garden/(.*)", "destination": "/$1" }
-  ]
+  "alias": "juancaicedo.com"
 }
