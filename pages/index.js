@@ -7,6 +7,7 @@ import { compileMdx } from '../lib/mdx'
 export default function Home({ title, mdxSource }) {
   return (
     <Layout title={title}>
+      <h1 className="text-4xl font-bold mb-8">{title}</h1>
       <MdxRenderer source={mdxSource} />
     </Layout>
   )
