@@ -1,0 +1,25 @@
+import React from 'react'
+import Layout from '../components/Layout'
+import MdxRenderer from '../components/MdxRenderer'
+import { getNoteBySlug } from '../lib/garden'
+import { compileMdx } from '../lib/mdx'
+
+export default function Now({ title, mdxSource }) {
+  return (
+    <Layout title={title}>
+      <MdxRenderer source={mdxSource} />
+    </Layout>
+  )
+}
+
+export async function getStaticProps() {
+  const note = getNoteBySlug('now')
+  if (!note) return { notFound: true }
+
+  return {
+    props: {
+      title: note.title,
+      mdxSource: await compileMdx(note.content),
+    },
+  }
+}

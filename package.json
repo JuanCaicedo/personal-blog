@@ -1,61 +1,35 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "personal-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Juan Caicedo's personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Juan Caicedo",
   "dependencies": {
-    "@aengusm/gatsby-theme-brain": "^1.0.13",
-    "gatsby": "^2.21.22",
-    "gatsby-cli": "^2.12.21",
-    "gatsby-image": "^2.4.3",
-    "gatsby-plugin-manifest": "^2.4.2",
-    "gatsby-plugin-mdx": "^1.2.7",
-    "gatsby-plugin-offline": "^3.2.1",
-    "gatsby-plugin-postcss": "^2.3.1",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sharp": "^2.6.2",
-    "gatsby-plugin-styled-jsx": "^3.3.1",
-    "gatsby-remark-embedder": "^2.0.1",
-    "gatsby-remark-images": "^3.3.3",
-    "gatsby-remark-prismjs": "^3.5.1",
-    "gatsby-source-filesystem": "^2.3.1",
-    "gatsby-transformer-remark": "^2.8.8",
-    "gatsby-transformer-sharp": "^2.5.2",
-    "nodemon": "^2.0.4",
-    "prism-react-renderer": "^1.1.1",
-    "prismjs": "^1.20.0",
+    "@mdx-js/mdx": "^3.1.1",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.0",
+    "next-mdx-remote-client": "^2.1.10",
+    "prism-react-renderer": "^2.4.1",
+    "prismjs": "^1.30.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0",
-    "react-markdown": "^4.3.1",
-    "styled-jsx": "^3.3.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "styled-jsx": "^5.1.7"
   },
   "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.6",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
     "prettier": "2.0.5",
-    "tailwindcss": "^1.4.6",
-    "vercel": "^19.0.1"
+    "tailwindcss": "^3.4.17"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": [],
   "license": "MIT",
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
-    "develop": "gatsby develop",
-    "dev": "PORT=2000 GATSBY_GRAPHQL_IDE=playground nodemon --watch 'gatsby-*.js' --exec 'gatsby develop'",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "test": "npm run build"
   }
 }
