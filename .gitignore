@@ -1,4 +1,5 @@
 local*
+.claude
 fixtures
 config/production.js
 node_modules
