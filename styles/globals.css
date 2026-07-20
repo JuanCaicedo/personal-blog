@@ -28,6 +28,15 @@ ol {
   @apply list-decimal pl-8;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-bold;
+}
+
 h1 {
   @apply text-5xl;
 }

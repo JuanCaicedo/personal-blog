@@ -10,7 +10,7 @@ function References({ backlinks }) {
 
   return (
     <section className="mt-12 pt-6 border-t border-gray-200">
-      <h3>Where have I mentioned this?</h3>
+      <h3 className="text-2xl">Where have I mentioned this?</h3>
       <ul>
         {backlinks.map((ref) => (
           <li key={ref.slug}>

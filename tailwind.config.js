@@ -11,6 +11,9 @@ module.exports = {
       colors: {
         ink: '#1e1b4b',
       },
+      fontFamily: {
+        display: ['var(--font-display)'],
+      },
     },
   },
   plugins: [],
