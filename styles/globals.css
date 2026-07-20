@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  color: #3182CE;
+  color: #4f46e5;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.4s ease 0s;
@@ -11,7 +11,13 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #C65B7D;
+  color: #1d4ed8;
+}
+
+a:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 ul {
@@ -20,6 +26,15 @@ ul {
 
 ol {
   @apply list-decimal pl-8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display font-bold;
 }
 
 h1 {
@@ -48,6 +63,14 @@ h6 {
 
 html,
 body {
-  @apply h-full bg-white;
-  color: #515151;
+  @apply min-h-screen;
+  color: #1e1b4b;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #cffafe 100%);
 }

@@ -5,20 +5,11 @@ import MdxRenderer, { mdxComponents } from '../../components/MdxRenderer'
 import { getPostBySlug, getPostSlugs } from '../../lib/posts'
 import { compileMdx } from '../../lib/mdx'
 
-function BlogParagraph({ children }) {
-  return <div className="bg-cyan-100">{children}</div>
-}
-
-const blogComponents = {
-  ...mdxComponents,
-  p: BlogParagraph,
-}
-
 export default function BlogPost({ title, mdxSource }) {
   return (
     <Layout title={title}>
       <Card className="juan-blog">
-        <MdxRenderer source={mdxSource} components={blogComponents} />
+        <MdxRenderer source={mdxSource} components={mdxComponents} />
       </Card>
     </Layout>
   )

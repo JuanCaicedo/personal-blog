@@ -18,6 +18,10 @@ function H3({ children }) {
   return <h3 className="text-3xl my-2">{children}</h3>
 }
 
+function Img({ src, alt }) {
+  return <img src={src} alt={alt} className="max-w-full max-h-96 mx-auto my-4 rounded-lg block" />
+}
+
 export const mdxComponents = {
   pre: ({ children }) => <>{children}</>,
   code: Code,
@@ -25,6 +29,7 @@ export const mdxComponents = {
   h1: H1,
   h2: H2,
   h3: H3,
+  img: Img,
 }
 
 export default function MdxRenderer({ source, components = mdxComponents }) {

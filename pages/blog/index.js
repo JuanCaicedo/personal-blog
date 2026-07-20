@@ -7,12 +7,12 @@ import { getAllPosts } from '../../lib/posts'
 function BlogIndex({ posts = [] }) {
   return (
     <Layout title="Blog">
-      <h1 className="mb-8 text-center">Previous posts</h1>
+      <h1 className="mb-8 text-center text-4xl">Previous posts</h1>
       {posts.map(({ title, date, slug }) => (
         <Card key={slug} className="w-full">
           <div>
             <Link href={`/blog/${slug}`}>
-              <h3>{title}</h3>
+              <h3 className="text-2xl">{title}</h3>
             </Link>
             <div>{date}</div>
           </div>
