@@ -1,9 +1,0 @@
-{
-  "reviewer": "agent-native-reviewer",
-  "findings": [],
-  "residual_risks": [
-    "None specific to agent-native parity: this diff has no new capability surface (no forms, inputs, routes, or API endpoints), so there is no gap between what a human user and an agent can do.",
-    "Confirmed via full diff review (git diff HEAD~5) across components/Card.js, components/Layout.js, components/Nav.js, pages/blog/[slug].js, pages/blog/index.js, pages/garden/[slug].js, styles/globals.css, tailwind.config.js that all changes are limited to CSS classes, a Google font import, a background gradient pseudo-element, and removal of an MDX paragraph color override."
-  ],
-  "testing_gaps": []
-}

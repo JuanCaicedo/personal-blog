@@ -1,8 +1,0 @@
-{
-  "reviewer": "project-standards",
-  "findings": [],
-  "residual_risks": [
-    "No CLAUDE.md or AGENTS.md standards files exist anywhere in this repository (verified via find for both root and ancestor directories of all changed files). This reviewer's mandate is to audit changes against project-written standards; with no such standards present, no compliance findings can be produced. This is a gap the project may want to address (e.g., documenting conventions for Next.js pages/components, color/token usage, or font-loading patterns) but it is not itself a defect in this diff."
-  ],
-  "testing_gaps": []
-}
