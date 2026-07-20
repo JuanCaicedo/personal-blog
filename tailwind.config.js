@@ -7,7 +7,11 @@ module.exports = {
     './posts/**/*.mdx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ink: '#1e1b4b',
+      },
+    },
   },
   plugins: [],
 }
