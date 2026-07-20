@@ -1,7 +1,7 @@
 ---
 title: "feat: Pastel gradient blog redesign"
 type: feat
-status: active
+status: completed
 date: 2026-07-01
 origin: docs/brainstorms/blog-redesign-requirements.md
 ---
@@ -85,7 +85,7 @@ The site currently reads as plain and generic: white background, gray `#515151` 
 
 ## Implementation Units
 
-- [ ] **Unit 1: Global palette and gradient foundation**
+- [x] **Unit 1: Global palette and gradient foundation**
 
 **Goal:** Gradient background on every page, dark indigo body text, new indigo link colors, full-viewport coverage on short pages.
 
@@ -114,7 +114,7 @@ The site currently reads as plain and generic: white background, gray `#515151` 
 - Links render medium indigo, hover to deeper blue.
 - Link color passes WCAG AA (4.5:1) against the lightest gradient stop `#cffafe` (per the risk table — darken toward `#4338ca` if it falls short).
 
-- [ ] **Unit 2: Layout and Nav treatment**
+- [x] **Unit 2: Layout and Nav treatment**
 
 **Goal:** Layout root no longer constrains height; nav reads as intentionally elevated from the gradient.
 
@@ -138,7 +138,7 @@ The site currently reads as plain and generic: white background, gray `#515151` 
 - No page shows a height regression (content still starts below the nav, footerless pages still fill the viewport).
 - Nav links keep a visible keyboard-focus indicator on the new treatment.
 
-- [ ] **Unit 3: Card restyle and blog-post surface**
+- [x] **Unit 3: Card restyle and blog-post surface**
 
 **Goal:** No yellow anywhere; cards and the blog-post reading surface harmonize with the gradient.
 
@@ -166,7 +166,7 @@ The site currently reads as plain and generic: white background, gray `#515151` 
 - Links inside cards pass WCAG AA contrast against the card fill (the card is lighter than any gradient stop, making link-on-card the worst case).
 - Cards remain visually distinct from the background at every scroll position, including against the gradient midpoint `#ede9fe` — fill or border must carry the edge.
 
-- [ ] **Unit 4: Display font for headings**
+- [x] **Unit 4: Display font for headings**
 
 **Goal:** Headings use a distinctive Google Fonts display face; body text stack unchanged.
 

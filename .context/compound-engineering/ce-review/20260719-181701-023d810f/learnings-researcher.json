@@ -1,0 +1,8 @@
+{
+  "reviewer": "learnings-researcher",
+  "findings": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "learnings": [],
+  "note": "docs/solutions/ does not exist in this repository (confirmed via filesystem check on 2026-07-19). No institutional knowledge base of past solutions is present, and no docs/solutions/patterns/critical-patterns.md exists either. This corroborates what the plan document (docs/plans/2026-07-01-001-feat-blog-redesign-plan.md) already stated at planning time. No topic-specific (Tailwind CSS, next/font, CSS specificity, MDX overrides) past-solution documents were found because none exist to search."
+}
