@@ -1,7 +1,7 @@
 ---
 title: Dependency PR Cleanup and Consolidated Update
 type: chore
-status: active
+status: completed
 date: 2026-07-19
 ---
 
@@ -128,7 +128,7 @@ None — all planning-time questions were resolved above.
 - `npm audit` shows the same or fewer advisories than before (3 moderate, all pre-existing and unrelated to this bump) — no new advisories introduced.
 - `git diff package.json` is empty or contains no unintended range widening.
 
-- [ ] **Unit 3: Open the consolidated dependency-update PR**
+- [x] **Unit 3: Open the consolidated dependency-update PR**
 
 **Goal:** Land Unit 2's lockfile changes as a single, clearly-described PR.
 
