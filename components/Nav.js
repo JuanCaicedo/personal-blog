@@ -8,7 +8,7 @@ const NavLink = ({ to, external, children, className = '' }) => {
 }
 
 const Nav = () => (
-  <header className="w-full">
+  <header className="w-full bg-white/50 border-b border-indigo-200/60 shadow-sm">
     <nav className="py-3 flex mx-auto max-w-3xl px-8 md:px-0">
       <NavLink to="/" className="flex-1">
         Hola!

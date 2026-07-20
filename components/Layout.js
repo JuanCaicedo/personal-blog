@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 export default function Layout({ children, title = 'Juan Caicedo' }) {
   return (
-    <div className="font-sans layout h-full">
+    <div className="font-sans min-h-screen">
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
