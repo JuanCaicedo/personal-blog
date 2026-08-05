@@ -7,7 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
     "gray-matter": "^4.0.3",
-    "next": "^16.2.0",
+    "next": "^16.3.0",
     "next-mdx-remote-client": "^2.1.10",
     "prism-react-renderer": "^2.4.1",
     "prismjs": "^1.30.0",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@next/swc-wasm-nodejs": "^16.2.6",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.23",
     "prettier": "2.0.5",
     "tailwindcss": "^3.4.17"
   },
